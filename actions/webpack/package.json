@@ -1,7 +1,8 @@
 {
   "name": "@github-actions-bundlers/hello-world-action-webpack",
   "version": "0.0.0",
-  "description": "A hello world github action",
+  "description": "A hello world github action using webpack",
+  "type": "module",
   "author": {
     "name": "Lucas Nørgård",
     "email": "lucasnrgaard@gmail.com",
@@ -16,10 +17,9 @@
   },
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsup",
+    "build": "webpack --config webpack.config.mjs",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@actions/core": "^1.10.1"
@@ -28,7 +28,9 @@
     "@luxass/eslint-config": "^4.9.0",
     "@types/node": "^20.4.5",
     "eslint": "^9.7.0",
-    "tsup": "^8.1.0",
-    "typescript": "^5.5.3"
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.5.3",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
   }
 }

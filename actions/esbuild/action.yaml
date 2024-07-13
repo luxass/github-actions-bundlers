@@ -1,5 +1,5 @@
-name: Hello World Action (ESBuild)
-description: An action that was bundled together using ESBuild
+name: Hello World Action (esbuild)
+description: An action that was bundled together using esbuild
 
 author: luxass
 branding:
