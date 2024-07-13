@@ -2,7 +2,6 @@
   "name": "@github-actions-bundlers/hello-world-action-tsup",
   "version": "0.0.0",
   "description": "A hello world github action using tsup",
-  "type": "module",
   "author": {
     "name": "Lucas Nørgård",
     "email": "lucasnrgaard@gmail.com",

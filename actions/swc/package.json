@@ -2,7 +2,6 @@
   "name": "hello-world-action",
   "version": "0.0.0",
   "description": "A hello world github action using swc",
-  "type": "module",
   "author": {
     "name": "Lucas Nørgård",
     "email": "lucasnrgaard@gmail.com",

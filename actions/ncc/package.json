@@ -2,7 +2,6 @@
   "name": "@github-actions-bundlers/hello-world-action-ncc",
   "version": "0.0.0",
   "description": "A hello world github action using @vercel/ncc",
-  "type": "module",
   "author": {
     "name": "Lucas Nørgård",
     "email": "lucasnrgaard@gmail.com",
