@@ -1,13 +1,13 @@
 {
   "name": "@github-actions-bundlers/hello-world-action-esbuild",
   "version": "0.0.0",
-  "packageManager": "pnpm@9.5.0",
-  "description": "A hello world github action",
+  "description": "A hello world github action built using ESBuild",
   "author": {
     "name": "Lucas Nørgård",
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
+  "packageManager": "pnpm@9.5.0",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
   },
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsup",
+    "build": "esbuild src/index.ts --bundle --platform=node --target=node20 --outfile=dist/index.js",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
@@ -27,8 +27,8 @@
   "devDependencies": {
     "@luxass/eslint-config": "^4.9.0",
     "@types/node": "^20.4.5",
+    "esbuild": "^0.23.0",
     "eslint": "^9.7.0",
-    "tsup": "^8.1.0",
     "typescript": "^5.5.3"
   }
 }

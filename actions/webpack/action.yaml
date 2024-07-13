@@ -1,5 +1,5 @@
-name: Hello World Action (tsup)
-description: An action that was bundled together using tsup
+name: Hello World Action (webpack)
+description: An action that was bundled together using webpack
 
 author: luxass
 branding:

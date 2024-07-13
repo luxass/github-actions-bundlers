@@ -1,5 +1,5 @@
-name: Hello World Action (tsup)
-description: An action that was bundled together using tsup
+name: Hello World Action (ESBuild)
+description: An action that was bundled together using ESBuild
 
 author: luxass
 branding:

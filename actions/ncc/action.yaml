@@ -1,0 +1,11 @@
+name: Hello World Action (@vercel/ncc)
+description: An action that was bundled together using @vercel/ncc
+
+author: luxass
+branding:
+  color: purple
+  icon: package
+
+runs:
+  using: node20
+  main: dist/index.js
