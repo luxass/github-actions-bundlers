@@ -8,5 +8,5 @@ export default defineConfig({
   treeshake: true,
   bundle: true,
   noExternal: ["@actions/core"],
-  skipNodeModulesBundle: true,
+  skipNodeModulesBundle: false,
 });
