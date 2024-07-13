@@ -1,0 +1,37 @@
+# See https://github.com/actions/labeler
+
+"bundler: esbuild":
+  - any:
+      - actions/esbuild/**
+
+"bundler: ncc":
+  - any:
+      - actions/ncc/**
+
+"bundler: webpack":
+  - any:
+      - actions/webpack/**
+
+"bundler: rollup":
+  - any:
+      - actions/rollup/**
+
+"bundler: tsup":
+  - any:
+      - actions/tsup/**
+
+"bundler: swc":
+  - any:
+      - actions/swc/**
+
+"bundler: tsc":
+  - any:
+      - actions/tsc/**
+
+"bundler: rspack":
+  - any:
+      - actions/rspack/**
+
+"🚨 ci":
+  - any:
+      - ".github/workflows/**"
