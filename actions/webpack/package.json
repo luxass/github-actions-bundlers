@@ -1,13 +1,13 @@
 {
   "name": "@github-actions-bundlers/hello-world-action-webpack",
   "version": "0.0.0",
-  "packageManager": "pnpm@9.5.0",
   "description": "A hello world github action",
   "author": {
     "name": "Lucas Nørgård",
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
+  "packageManager": "pnpm@9.5.0",
   "license": "MIT",
   "repository": {
     "type": "git",

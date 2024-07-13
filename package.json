@@ -33,7 +33,8 @@
     "typecheck": "turbo run typecheck",
     "clean": "git clean -xdf node_modules",
     "clean:workspaces": "turbo run clean",
-    "postinstall": "pnpm lint:ws"
+    "postinstall": "pnpm lint:ws",
+    "update:actions": "tsx ./scripts/update-hello-world-workflow.ts"
   },
   "devDependencies": {
     "@luxass/eslint-config": "^4.9.0",

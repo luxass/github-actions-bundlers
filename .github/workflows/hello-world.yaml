@@ -1,0 +1,68 @@
+
+name: Hello World
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+
+  esbuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4.1.7
+
+      - name: Hello World (esbuild)
+        uses: ./actions/esbuild
+        
+  ncc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4.1.7
+
+      - name: Hello World (ncc)
+        uses: ./actions/ncc
+        
+  rspack:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4.1.7
+
+      - name: Hello World (rspack)
+        uses: ./actions/rspack
+        
+  swc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4.1.7
+
+      - name: Hello World (swc)
+        uses: ./actions/swc
+        
+  tsup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4.1.7
+
+      - name: Hello World (tsup)
+        uses: ./actions/tsup
+        
+  webpack:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4.1.7
+
+      - name: Hello World (webpack)
+        uses: ./actions/webpack
+        
