@@ -30,6 +30,15 @@ jobs:
       - name: Hello World (ncc)
         uses: ./actions/ncc
         
+  rollup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4.1.7
+
+      - name: Hello World (rollup)
+        uses: ./actions/rollup
+        
   rspack:
     runs-on: ubuntu-latest
     steps:
@@ -38,15 +47,6 @@ jobs:
 
       - name: Hello World (rspack)
         uses: ./actions/rspack
-        
-  swc:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v4.1.7
-
-      - name: Hello World (swc)
-        uses: ./actions/swc
         
   tsup:
     runs-on: ubuntu-latest
