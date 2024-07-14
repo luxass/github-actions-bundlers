@@ -1,12 +1,6 @@
 name: Hello World Action (rollup)
 description: An action that was bundled together using rollup
 
-inputs:
-  github-token:
-    description: GitHub Token
-    required: true
-    default: ${{ github.token }}
-
 author: luxass
 branding:
   color: purple

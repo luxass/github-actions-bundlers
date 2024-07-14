@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@luxass/eslint-config": "^4.9.0",
-    "@types/node": "^18.16.19",
+    "@types/node": "^20.14.10",
     "eslint": "^9.7.0",
     "tsup": "^8.1.0",
     "turbo": "^2.0.6",
