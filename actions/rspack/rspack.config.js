@@ -1,10 +1,6 @@
-import path from "node:path";
-import { fileURLToPath } from "node:url";
+const path = require("node:path");
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-export default {
+module.exports = {
   target: "node",
   mode: "production",
   entry: "./src/index.ts",
