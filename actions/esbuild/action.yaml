@@ -1,6 +1,12 @@
 name: Hello World Action (esbuild)
 description: An action that was bundled together using esbuild
 
+inputs:
+  github-token:
+    description: GitHub Token
+    required: true
+    default: ${{ github.token }}
+
 author: luxass
 branding:
   color: purple
