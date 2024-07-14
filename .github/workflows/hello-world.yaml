@@ -14,6 +14,8 @@ jobs:
 
   esbuild:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
       - name: checkout
         uses: actions/checkout@v4.1.7
@@ -25,6 +27,8 @@ jobs:
         
   ncc:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
       - name: checkout
         uses: actions/checkout@v4.1.7
@@ -36,6 +40,8 @@ jobs:
         
   rollup:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
       - name: checkout
         uses: actions/checkout@v4.1.7
@@ -47,6 +53,8 @@ jobs:
         
   rspack:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
       - name: checkout
         uses: actions/checkout@v4.1.7
@@ -58,6 +66,8 @@ jobs:
         
   tsup:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
       - name: checkout
         uses: actions/checkout@v4.1.7
@@ -69,6 +79,8 @@ jobs:
         
   webpack:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
       - name: checkout
         uses: actions/checkout@v4.1.7

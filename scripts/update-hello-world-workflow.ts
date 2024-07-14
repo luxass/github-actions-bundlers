@@ -25,6 +25,8 @@ async function run() {
         baseWorkflowFile += `
   ${folder}:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
       - name: checkout
         uses: actions/checkout@v4.1.7
