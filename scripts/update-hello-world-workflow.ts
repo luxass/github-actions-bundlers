@@ -25,16 +25,12 @@ async function run() {
         baseWorkflowFile += `
   ${folder}:
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
     steps:
       - name: checkout
         uses: actions/checkout@v4.1.7
 
       - name: Hello World (${folder})
         uses: ./actions/${folder}
-        with:
-          github-token: \${{ secrets.GITHUB_TOKEN }}
         `;
       }
     }

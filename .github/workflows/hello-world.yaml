@@ -14,79 +14,55 @@ jobs:
 
   esbuild:
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
     steps:
       - name: checkout
         uses: actions/checkout@v4.1.7
 
       - name: Hello World (esbuild)
         uses: ./actions/esbuild
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
         
   ncc:
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
     steps:
       - name: checkout
         uses: actions/checkout@v4.1.7
 
       - name: Hello World (ncc)
         uses: ./actions/ncc
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
         
   rollup:
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
     steps:
       - name: checkout
         uses: actions/checkout@v4.1.7
 
       - name: Hello World (rollup)
         uses: ./actions/rollup
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
         
   rspack:
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
     steps:
       - name: checkout
         uses: actions/checkout@v4.1.7
 
       - name: Hello World (rspack)
         uses: ./actions/rspack
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
         
   tsup:
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
     steps:
       - name: checkout
         uses: actions/checkout@v4.1.7
 
       - name: Hello World (tsup)
         uses: ./actions/tsup
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
         
   webpack:
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
     steps:
       - name: checkout
         uses: actions/checkout@v4.1.7
 
       - name: Hello World (webpack)
         uses: ./actions/webpack
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
         
