@@ -11,6 +11,7 @@ on:
       - synchronize
 
 jobs:
+
   esbuild:
     runs-on: ubuntu-latest
     steps:
@@ -19,7 +20,9 @@ jobs:
 
       - name: Hello World (esbuild)
         uses: ./actions/esbuild
-
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+        
   ncc:
     runs-on: ubuntu-latest
     steps:
@@ -28,7 +31,9 @@ jobs:
 
       - name: Hello World (ncc)
         uses: ./actions/ncc
-
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+        
   rollup:
     runs-on: ubuntu-latest
     steps:
@@ -37,7 +42,9 @@ jobs:
 
       - name: Hello World (rollup)
         uses: ./actions/rollup
-
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+        
   rspack:
     runs-on: ubuntu-latest
     steps:
@@ -46,7 +53,9 @@ jobs:
 
       - name: Hello World (rspack)
         uses: ./actions/rspack
-
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+        
   tsup:
     runs-on: ubuntu-latest
     steps:
@@ -55,7 +64,9 @@ jobs:
 
       - name: Hello World (tsup)
         uses: ./actions/tsup
-
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+        
   webpack:
     runs-on: ubuntu-latest
     steps:
@@ -64,3 +75,6 @@ jobs:
 
       - name: Hello World (webpack)
         uses: ./actions/webpack
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+        

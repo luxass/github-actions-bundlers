@@ -31,6 +31,8 @@ async function run() {
 
       - name: Hello World (${folder})
         uses: ./actions/${folder}
+        with:
+          github-token: \${{ secrets.GITHUB_TOKEN }}
         `;
       }
     }
