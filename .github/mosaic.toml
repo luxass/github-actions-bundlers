@@ -6,7 +6,6 @@
 
 [project]
 name = "github-actions-bundlers"
-version = true
 
 [readme]
 enabled = true
