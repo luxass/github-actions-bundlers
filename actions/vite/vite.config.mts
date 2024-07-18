@@ -7,6 +7,11 @@ export default defineConfig({
     ssr: true,
     rollupOptions: {
       input: ["src/index.ts"],
+      output: {
+        entryFileNames: "index.js",
+        format: "cjs",
+        exports: "auto",
+      },
     },
   },
   ssr: {

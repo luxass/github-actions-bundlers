@@ -1,15 +1,16 @@
-import process$1 from "node:process";
-import require$$0 from "os";
-import require$$0$1 from "fs";
-import crypto from "crypto";
-import require$$0$2 from "path";
-import require$$2$1 from "http";
-import require$$3 from "https";
-import "net";
-import require$$1 from "tls";
-import require$$4 from "events";
-import "assert";
-import require$$6 from "util";
+"use strict";
+const process$1 = require("node:process");
+const require$$0 = require("os");
+const require$$0$1 = require("fs");
+const crypto = require("crypto");
+const require$$0$2 = require("path");
+const require$$2$1 = require("http");
+const require$$3 = require("https");
+require("net");
+const require$$1 = require("tls");
+const require$$4 = require("events");
+require("assert");
+const require$$6 = require("util");
 var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
 function getAugmentedNamespace(n) {
   if (n.__esModule) return n;
