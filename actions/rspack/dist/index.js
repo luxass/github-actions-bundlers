@@ -465,7 +465,7 @@ exports.prepareKeyValueMessage = exports.issueFileCommand = void 0;
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const fs = __importStar(__webpack_require__(147));
 const os = __importStar(__webpack_require__(37));
-const uuid_1 = __webpack_require__(686);
+const uuid_1 = __webpack_require__(239);
 const utils_1 = __webpack_require__(106);
 function issueFileCommand(command, message) {
     const filePath = process.env[`GITHUB_${command}`];
@@ -1766,11 +1766,11 @@ function isLoopbackAddress(host) {
 
 }),
 "785": (function (module, __unused_webpack_exports, __webpack_require__) {
-module.exports = __webpack_require__(820);
+module.exports = __webpack_require__(163);
 
 
 }),
-"820": (function (__unused_webpack_module, exports, __webpack_require__) {
+"163": (function (__unused_webpack_module, exports, __webpack_require__) {
 "use strict";
 
 
@@ -2039,152 +2039,51 @@ exports.debug = debug; // for test
 
 
 }),
-"686": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+"239": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  NIL: function() { return /* reexport safe */ _nil_js__WEBPACK_IMPORTED_MODULE_4__.Z; },
-  parse: function() { return /* reexport safe */ _parse_js__WEBPACK_IMPORTED_MODULE_8__.Z; },
-  stringify: function() { return /* reexport safe */ _stringify_js__WEBPACK_IMPORTED_MODULE_7__.Z; },
-  v1: function() { return /* reexport safe */ _v1_js__WEBPACK_IMPORTED_MODULE_0__.Z; },
-  v3: function() { return /* reexport safe */ _v3_js__WEBPACK_IMPORTED_MODULE_1__.Z; },
-  v4: function() { return /* reexport safe */ _v4_js__WEBPACK_IMPORTED_MODULE_2__.Z; },
-  v5: function() { return /* reexport safe */ _v5_js__WEBPACK_IMPORTED_MODULE_3__.Z; },
-  validate: function() { return /* reexport safe */ _validate_js__WEBPACK_IMPORTED_MODULE_6__.Z; },
-  version: function() { return /* reexport safe */ _version_js__WEBPACK_IMPORTED_MODULE_5__.Z; }
+  version: () => (/* reexport */ version_),
+  v3: () => (/* reexport */ v3_),
+  v4: () => (/* reexport */ v4_),
+  v5: () => (/* reexport */ v5_),
+  NIL: () => (/* reexport */ nil_),
+  stringify: () => (/* reexport */ stringify_),
+  parse: () => (/* reexport */ parse_),
+  v1: () => (/* reexport */ v1_),
+  validate: () => (/* reexport */ validate_)
 });
-/* harmony import */var _v1_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(549);
-/* harmony import */var _v3_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(406);
-/* harmony import */var _v4_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(916);
-/* harmony import */var _v5_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(124);
-/* harmony import */var _nil_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(221);
-/* harmony import */var _version_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(14);
-/* harmony import */var _validate_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(802);
-/* harmony import */var _stringify_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(997);
-/* harmony import */var _parse_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(939);
 
-
-
-
-
-
-
-
-
-
-}),
-"998": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-"use strict";
-/* harmony import */var crypto__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(113);
-/* harmony import */var crypto__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(crypto__WEBPACK_IMPORTED_MODULE_0__);
-
-
-function md5(bytes) {
-  if (Array.isArray(bytes)) {
-    bytes = Buffer.from(bytes);
-  } else if (typeof bytes === 'string') {
-    bytes = Buffer.from(bytes, 'utf8');
-  }
-
-  return crypto__WEBPACK_IMPORTED_MODULE_0___default().createHash('md5').update(bytes).digest();
-}
-
-/* harmony default export */ __webpack_exports__.Z = (md5);
-
-}),
-"221": (function (__unused_webpack_module, __webpack_exports__) {
-"use strict";
-/* harmony default export */ __webpack_exports__.Z = ('00000000-0000-0000-0000-000000000000');
-
-}),
-"939": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-"use strict";
-/* harmony import */var _validate_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(802);
-
-
-function parse(uuid) {
-  if (!(0,_validate_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */.Z)(uuid)) {
-    throw TypeError('Invalid UUID');
-  }
-
-  let v;
-  const arr = new Uint8Array(16); // Parse ########-....-....-....-............
-
-  arr[0] = (v = parseInt(uuid.slice(0, 8), 16)) >>> 24;
-  arr[1] = v >>> 16 & 0xff;
-  arr[2] = v >>> 8 & 0xff;
-  arr[3] = v & 0xff; // Parse ........-####-....-....-............
-
-  arr[4] = (v = parseInt(uuid.slice(9, 13), 16)) >>> 8;
-  arr[5] = v & 0xff; // Parse ........-....-####-....-............
-
-  arr[6] = (v = parseInt(uuid.slice(14, 18), 16)) >>> 8;
-  arr[7] = v & 0xff; // Parse ........-....-....-####-............
-
-  arr[8] = (v = parseInt(uuid.slice(19, 23), 16)) >>> 8;
-  arr[9] = v & 0xff; // Parse ........-....-....-....-############
-  // (Use "/" to avoid 32-bit truncation when bit-shifting high-order bytes)
-
-  arr[10] = (v = parseInt(uuid.slice(24, 36), 16)) / 0x10000000000 & 0xff;
-  arr[11] = v / 0x100000000 & 0xff;
-  arr[12] = v >>> 24 & 0xff;
-  arr[13] = v >>> 16 & 0xff;
-  arr[14] = v >>> 8 & 0xff;
-  arr[15] = v & 0xff;
-  return arr;
-}
-
-/* harmony default export */ __webpack_exports__.Z = (parse);
-
-}),
-"332": (function (__unused_webpack_module, __webpack_exports__) {
-"use strict";
-/* harmony default export */ __webpack_exports__.Z = (/^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|00000000-0000-0000-0000-000000000000)$/i);
-
-}),
-"159": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-"use strict";
-__webpack_require__.d(__webpack_exports__, {
-  Z: function() { return rng; }
-});
-/* harmony import */var crypto__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(113);
-/* harmony import */var crypto__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(crypto__WEBPACK_IMPORTED_MODULE_0__);
+;// CONCATENATED MODULE: external "crypto"
+var external_crypto_namespaceObject = require("crypto");
+let external_crypto_default = /*#__PURE__*/__webpack_require__.n(external_crypto_namespaceObject);
+;// CONCATENATED MODULE: ../../node_modules/.pnpm/uuid@8.3.2/node_modules/uuid/dist/esm-node/rng.js
 
 const rnds8Pool = new Uint8Array(256); // # of random values to pre-allocate
 
 let poolPtr = rnds8Pool.length;
-function rng() {
+function rng_rng() {
   if (poolPtr > rnds8Pool.length - 16) {
-    crypto__WEBPACK_IMPORTED_MODULE_0___default().randomFillSync(rnds8Pool);
+    external_crypto_default().randomFillSync(rnds8Pool);
     poolPtr = 0;
   }
 
   return rnds8Pool.slice(poolPtr, poolPtr += 16);
 }
-
-}),
-"644": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-"use strict";
-/* harmony import */var crypto__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(113);
-/* harmony import */var crypto__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(crypto__WEBPACK_IMPORTED_MODULE_0__);
+;// CONCATENATED MODULE: ../../node_modules/.pnpm/uuid@8.3.2/node_modules/uuid/dist/esm-node/regex.js
+/* harmony default export */ const regex_ = (/^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|00000000-0000-0000-0000-000000000000)$/i);
+;// CONCATENATED MODULE: ../../node_modules/.pnpm/uuid@8.3.2/node_modules/uuid/dist/esm-node/validate.js
 
 
-function sha1(bytes) {
-  if (Array.isArray(bytes)) {
-    bytes = Buffer.from(bytes);
-  } else if (typeof bytes === 'string') {
-    bytes = Buffer.from(bytes, 'utf8');
-  }
-
-  return crypto__WEBPACK_IMPORTED_MODULE_0___default().createHash('sha1').update(bytes).digest();
+function validate(uuid) {
+  return typeof uuid === 'string' && regex_.test(uuid);
 }
 
-/* harmony default export */ __webpack_exports__.Z = (sha1);
-
-}),
-"997": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-"use strict";
-/* harmony import */var _validate_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(802);
+/* harmony default export */ const validate_ = (validate);
+;// CONCATENATED MODULE: ../../node_modules/.pnpm/uuid@8.3.2/node_modules/uuid/dist/esm-node/stringify.js
 
 /**
  * Convert array of 16 byte values to UUID string format of the form:
@@ -2206,20 +2105,15 @@ function stringify(arr, offset = 0) {
   // "undefined" in the uuid)
   // - Invalid input values for the RFC `version` or `variant` fields
 
-  if (!(0,_validate_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */.Z)(uuid)) {
+  if (!validate_(uuid)) {
     throw TypeError('Stringified UUID is invalid');
   }
 
   return uuid;
 }
 
-/* harmony default export */ __webpack_exports__.Z = (stringify);
-
-}),
-"549": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-"use strict";
-/* harmony import */var _rng_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(159);
-/* harmony import */var _stringify_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(997);
+/* harmony default export */ const stringify_ = (stringify);
+;// CONCATENATED MODULE: ../../node_modules/.pnpm/uuid@8.3.2/node_modules/uuid/dist/esm-node/v1.js
 
  // **`v1()` - Generate time-based UUID**
 //
@@ -2244,7 +2138,7 @@ function v1(options, buf, offset) {
   // system entropy.  See #189
 
   if (node == null || clockseq == null) {
-    const seedBytes = options.random || (options.rng || _rng_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */.Z)();
+    const seedBytes = options.random || (options.rng || rng_rng)();
 
     if (node == null) {
       // Per 4.5, create and 48-bit node id, (47 random bits + multicast bit = 1)
@@ -2311,29 +2205,47 @@ function v1(options, buf, offset) {
     b[i + n] = node[n];
   }
 
-  return buf || (0,_stringify_js__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */.Z)(b);
+  return buf || stringify_(b);
 }
 
-/* harmony default export */ __webpack_exports__.Z = (v1);
-
-}),
-"406": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-"use strict";
-/* harmony import */var _v35_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(437);
-/* harmony import */var _md5_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(998);
+/* harmony default export */ const v1_ = (v1);
+;// CONCATENATED MODULE: ../../node_modules/.pnpm/uuid@8.3.2/node_modules/uuid/dist/esm-node/parse.js
 
 
-const v3 = (0,_v35_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */.ZP)('v3', 0x30, _md5_js__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */.Z);
-/* harmony default export */ __webpack_exports__.Z = (v3);
+function parse(uuid) {
+  if (!validate_(uuid)) {
+    throw TypeError('Invalid UUID');
+  }
 
-}),
-"437": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-"use strict";
-__webpack_require__.d(__webpack_exports__, {
-  ZP: function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
-});
-/* harmony import */var _stringify_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(997);
-/* harmony import */var _parse_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(939);
+  let v;
+  const arr = new Uint8Array(16); // Parse ########-....-....-....-............
+
+  arr[0] = (v = parseInt(uuid.slice(0, 8), 16)) >>> 24;
+  arr[1] = v >>> 16 & 0xff;
+  arr[2] = v >>> 8 & 0xff;
+  arr[3] = v & 0xff; // Parse ........-####-....-....-............
+
+  arr[4] = (v = parseInt(uuid.slice(9, 13), 16)) >>> 8;
+  arr[5] = v & 0xff; // Parse ........-....-####-....-............
+
+  arr[6] = (v = parseInt(uuid.slice(14, 18), 16)) >>> 8;
+  arr[7] = v & 0xff; // Parse ........-....-....-####-............
+
+  arr[8] = (v = parseInt(uuid.slice(19, 23), 16)) >>> 8;
+  arr[9] = v & 0xff; // Parse ........-....-....-....-############
+  // (Use "/" to avoid 32-bit truncation when bit-shifting high-order bytes)
+
+  arr[10] = (v = parseInt(uuid.slice(24, 36), 16)) / 0x10000000000 & 0xff;
+  arr[11] = v / 0x100000000 & 0xff;
+  arr[12] = v >>> 24 & 0xff;
+  arr[13] = v >>> 16 & 0xff;
+  arr[14] = v >>> 8 & 0xff;
+  arr[15] = v & 0xff;
+  return arr;
+}
+
+/* harmony default export */ const parse_ = (parse);
+;// CONCATENATED MODULE: ../../node_modules/.pnpm/uuid@8.3.2/node_modules/uuid/dist/esm-node/v35.js
 
 
 
@@ -2349,16 +2261,16 @@ function stringToBytes(str) {
   return bytes;
 }
 
-const DNS = '6ba7b810-9dad-11d1-80b4-00c04fd430c8';
-const URL = '6ba7b811-9dad-11d1-80b4-00c04fd430c8';
-/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(name, version, hashfunc) {
+const v35_DNS = '6ba7b810-9dad-11d1-80b4-00c04fd430c8';
+const v35_URL = '6ba7b811-9dad-11d1-80b4-00c04fd430c8';
+/* harmony default export */ function v35_(name, version, hashfunc) {
   function generateUUID(value, namespace, buf, offset) {
     if (typeof value === 'string') {
       value = stringToBytes(value);
     }
 
     if (typeof namespace === 'string') {
-      namespace = (0,_parse_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */.Z)(namespace);
+      namespace = parse_(namespace);
     }
 
     if (namespace.length !== 16) {
@@ -2385,7 +2297,7 @@ const URL = '6ba7b811-9dad-11d1-80b4-00c04fd430c8';
       return buf;
     }
 
-    return (0,_stringify_js__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */.Z)(bytes);
+    return stringify_(bytes);
   } // Function#name is not settable on some platforms (#270)
 
 
@@ -2394,22 +2306,36 @@ const URL = '6ba7b811-9dad-11d1-80b4-00c04fd430c8';
   } catch (err) {} // For CommonJS default export support
 
 
-  generateUUID.DNS = DNS;
-  generateUUID.URL = URL;
+  generateUUID.DNS = v35_DNS;
+  generateUUID.URL = v35_URL;
   return generateUUID;
 }
+;// CONCATENATED MODULE: ../../node_modules/.pnpm/uuid@8.3.2/node_modules/uuid/dist/esm-node/md5.js
 
-}),
-"916": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-"use strict";
-/* harmony import */var _rng_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(159);
-/* harmony import */var _stringify_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(997);
+
+function md5(bytes) {
+  if (Array.isArray(bytes)) {
+    bytes = Buffer.from(bytes);
+  } else if (typeof bytes === 'string') {
+    bytes = Buffer.from(bytes, 'utf8');
+  }
+
+  return external_crypto_default().createHash('md5').update(bytes).digest();
+}
+
+/* harmony default export */ const md5_ = (md5);
+;// CONCATENATED MODULE: ../../node_modules/.pnpm/uuid@8.3.2/node_modules/uuid/dist/esm-node/v3.js
+
+
+const v3 = v35_('v3', 0x30, md5_);
+/* harmony default export */ const v3_ = (v3);
+;// CONCATENATED MODULE: ../../node_modules/.pnpm/uuid@8.3.2/node_modules/uuid/dist/esm-node/v4.js
 
 
 
 function v4(options, buf, offset) {
   options = options || {};
-  const rnds = options.random || (options.rng || _rng_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */.Z)(); // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
+  const rnds = options.random || (options.rng || rng_rng)(); // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
 
   rnds[6] = rnds[6] & 0x0f | 0x40;
   rnds[8] = rnds[8] & 0x3f | 0x80; // Copy bytes to buffer, if provided
@@ -2424,58 +2350,58 @@ function v4(options, buf, offset) {
     return buf;
   }
 
-  return (0,_stringify_js__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */.Z)(rnds);
+  return stringify_(rnds);
 }
 
-/* harmony default export */ __webpack_exports__.Z = (v4);
-
-}),
-"124": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-"use strict";
-/* harmony import */var _v35_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(437);
-/* harmony import */var _sha1_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(644);
+/* harmony default export */ const v4_ = (v4);
+;// CONCATENATED MODULE: ../../node_modules/.pnpm/uuid@8.3.2/node_modules/uuid/dist/esm-node/sha1.js
 
 
-const v5 = (0,_v35_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */.ZP)('v5', 0x50, _sha1_js__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */.Z);
-/* harmony default export */ __webpack_exports__.Z = (v5);
+function sha1(bytes) {
+  if (Array.isArray(bytes)) {
+    bytes = Buffer.from(bytes);
+  } else if (typeof bytes === 'string') {
+    bytes = Buffer.from(bytes, 'utf8');
+  }
 
-}),
-"802": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-"use strict";
-/* harmony import */var _regex_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(332);
-
-
-function validate(uuid) {
-  return typeof uuid === 'string' && _regex_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"].test */.Z.test(uuid);
+  return external_crypto_default().createHash('sha1').update(bytes).digest();
 }
 
-/* harmony default export */ __webpack_exports__.Z = (validate);
-
-}),
-"14": (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-"use strict";
-/* harmony import */var _validate_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(802);
+/* harmony default export */ const sha1_ = (sha1);
+;// CONCATENATED MODULE: ../../node_modules/.pnpm/uuid@8.3.2/node_modules/uuid/dist/esm-node/v5.js
 
 
-function version(uuid) {
-  if (!(0,_validate_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */.Z)(uuid)) {
+const v5 = v35_('v5', 0x50, sha1_);
+/* harmony default export */ const v5_ = (v5);
+;// CONCATENATED MODULE: ../../node_modules/.pnpm/uuid@8.3.2/node_modules/uuid/dist/esm-node/nil.js
+/* harmony default export */ const nil_ = ('00000000-0000-0000-0000-000000000000');
+;// CONCATENATED MODULE: ../../node_modules/.pnpm/uuid@8.3.2/node_modules/uuid/dist/esm-node/version.js
+
+
+function version_version(uuid) {
+  if (!validate_(uuid)) {
     throw TypeError('Invalid UUID');
   }
 
   return parseInt(uuid.substr(14, 1), 16);
 }
 
-/* harmony default export */ __webpack_exports__.Z = (version);
+/* harmony default export */ const version_ = (version_version);
+;// CONCATENATED MODULE: ../../node_modules/.pnpm/uuid@8.3.2/node_modules/uuid/dist/esm-node/index.js
+
+
+
+
+
+
+
+
+
 
 }),
 "491": (function (module) {
 "use strict";
 module.exports = require("assert");
-
-}),
-"113": (function (module) {
-"use strict";
-module.exports = require("crypto");
 
 }),
 "361": (function (module) {
@@ -2501,11 +2427,6 @@ module.exports = require("https");
 "808": (function (module) {
 "use strict";
 module.exports = require("net");
-
-}),
-"742": (function (module) {
-"use strict";
-module.exports = require("node:process");
 
 }),
 "37": (function (module) {
@@ -2598,16 +2519,30 @@ __webpack_require__.r = function(exports) {
 };
 
 })();
+// webpack/runtime/rspack_version
+(() => {
+__webpack_require__.rv = function () {
+	return "1.0.0-alpha.5";
+};
+
+})();
+// webpack/runtime/rspack_unique_id
+(() => {
+__webpack_require__.ruid = "bundler=rspack@1.0.0-alpha.5";
+
+})();
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */var node_process__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(742);
-/* harmony import */var node_process__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(node_process__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */var _actions_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(995);
-/* harmony import */var _actions_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_actions_core__WEBPACK_IMPORTED_MODULE_1__);
+
+;// CONCATENATED MODULE: external "node:process"
+var external_node_process_namespaceObject = require("node:process");
+let external_node_process_default = /*#__PURE__*/__webpack_require__.n(external_node_process_namespaceObject);
+// EXTERNAL MODULE: ../../node_modules/.pnpm/@actions+core@1.10.1/node_modules/@actions/core/lib/core.js
+let core_ = __webpack_require__("995");
+;// CONCATENATED MODULE: ./src/index.ts
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
     try {
         var info = gen[key](arg);
@@ -2764,7 +2699,7 @@ function _run() {
                     ];
                 case 1:
                     data = _state.sent();
-                    _actions_core__WEBPACK_IMPORTED_MODULE_1__.info("fetched data: ".concat(JSON.stringify(data)));
+                    core_.info("fetched data: ".concat(JSON.stringify(data)));
                     return [
                         3,
                         3
@@ -2772,9 +2707,9 @@ function _run() {
                 case 2:
                     error = _state.sent();
                     if (_instanceof(error, Error)) {
-                        _actions_core__WEBPACK_IMPORTED_MODULE_1__.setFailed(error.message);
+                        core_.setFailed(error.message);
                     } else {
-                        _actions_core__WEBPACK_IMPORTED_MODULE_1__.setFailed("An unexpected error occurred");
+                        core_.setFailed("An unexpected error occurred");
                     }
                     return [
                         3,
@@ -2791,8 +2726,8 @@ function _run() {
 }
 run().catch(function(err) {
     console.error(err);
-    _actions_core__WEBPACK_IMPORTED_MODULE_1__.setFailed(err);
-    node_process__WEBPACK_IMPORTED_MODULE_0___default().exit(1);
+    core_.setFailed(err);
+    external_node_process_default().exit(1);
 });
 
 })();
