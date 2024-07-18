@@ -20,9 +20,13 @@
   - any:
       - actions/tsup/**
 
-"bundler: swc":
+"bundler: vite":
   - any:
-      - actions/swc/**
+      - actions/vite/**
+
+"bundler: rolldown":
+  - any:
+      - actions/rolldown/**
 
 "bundler: tsc":
   - any:
@@ -32,6 +36,6 @@
   - any:
       - actions/rspack/**
 
-"🚨 ci":
+🚨 ci:
   - any:
       - ".github/workflows/**"
