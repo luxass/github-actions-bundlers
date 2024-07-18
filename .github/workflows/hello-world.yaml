@@ -57,6 +57,15 @@ jobs:
       - name: Hello World (tsup)
         uses: ./actions/tsup
         
+  vite:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4.1.7
+
+      - name: Hello World (vite)
+        uses: ./actions/vite
+        
   webpack:
     runs-on: ubuntu-latest
     steps:

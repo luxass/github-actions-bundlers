@@ -1,0 +1,11 @@
+name: Hello World Action (vite)
+description: An action that was bundled together using vite
+
+author: luxass
+branding:
+  color: purple
+  icon: package
+
+runs:
+  using: node20
+  main: dist/index.js
