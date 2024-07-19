@@ -153,6 +153,21 @@ If you want to create your own action, using one of these bundlers, there is a g
 - May require additional configuration for complex projects
 </details>
 
+<details>
+<summary>Bunchee</summary>
+
+[Bunchee](https://github.com/huozhi/bunchee) is a zero config bundler for ECMAScript and TypeScript packages. It is designed to be simple and fast, with a focus on ease of use and minimal configuration.
+
+### Pros
+
+- Uses Rollup and SWC under the hood
+- Zero-config bundling
+
+### Cons
+
+- Newer project, may lack some features
+</details>
+
 ## 📄 License
 
 Published under [MIT License](./LICENSE).
