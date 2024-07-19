@@ -17,7 +17,7 @@
   },
   "main": "dist/index.cjs",
   "scripts": {
-    "build": "webpack --config webpack.config.mjs",
+    "build": "webpack --config ./webpack.config.mjs",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "clean": "git clean -xdf node_modules .turbo dist"
