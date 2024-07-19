@@ -5,7 +5,9 @@ A repository to test github actions with a different set of bundlers
 ## Bundlers
 
 <details>
-<summary><a href="https://webpack.js.org/">webpack</a></summary>
+<summary>webpack</summary>
+
+[webpack](https://webpack.js.org/) is a powerful and highly configurable module bundler for JavaScript applications. It can handle a wide variety of assets beyond JavaScript, making it popular for complex web applications.
 
 ### Pros
 
@@ -21,7 +23,9 @@ A repository to test github actions with a different set of bundlers
 </details>
 
 <details>
-<summary><a href="https://rspack.dev">rspack</a></summary>
+<summary>rspack</summary>
+
+[rspack](https://rspack.dev) is a fast Rust-based JavaScript bundler, designed as a drop-in replacement for Webpack. It aims to provide Webpack-compatible features with significantly improved build performance.
 
 ### Pros
 
@@ -37,7 +41,9 @@ A repository to test github actions with a different set of bundlers
 </details>
 
 <details>
-<summary><a href="https://rollupjs.org/">rollup</a></summary>
+<summary>rollup</summary>
+
+[rollup](https://rollupjs.org) is a module bundler for JavaScript that excels at creating efficient, tree-shaken bundles. It's particularly well-suited for libraries and applications using ES modules.
 
 ### Pros
 
@@ -53,7 +59,9 @@ A repository to test github actions with a different set of bundlers
 </details>
 
 <details>
-<summary><a href="https://rolldown.rs/">rolldown</a></summary>
+<summary>rolldown</summary>
+
+[rolldown](https://rolldown.rs) is a Rust-based JavaScript bundler that aims to have a Rollup compatible API. It leverages Rust's performance to deliver fast build times and efficient bundling for modern web projects.
 
 ### Pros
 
@@ -68,7 +76,9 @@ A repository to test github actions with a different set of bundlers
 </details>
 
 <details>
-<summary><a href="https://esbuild.github.io/">esbuild</a></summary>
+<summary>esbuild</summary>
+
+[esbuild](https://esbuild.github.io) is an extremely fast JavaScript bundler and minifier written in Go. It prioritizes speed and simplicity, offering quick build times for modern web projects.
 
 ### Pros
 
@@ -84,7 +94,9 @@ A repository to test github actions with a different set of bundlers
 </details>
 
 <details>
-<summary><a href="https://github.com/egoist/tsup">tsup</a></summary>
+<summary>tsup</summary>
+
+[tsup](https://github.com/egoist/tsup) is a zero-config TypeScript bundler designed for simplicity and speed. It can quickly bundle TypeScript projects into various output formats, handling both CommonJS and ES modules with minimal configuration required.
 
 ### Pros
 
@@ -100,9 +112,9 @@ A repository to test github actions with a different set of bundlers
 </details>
 
 <details>
-<summary><a href="https://github.com/vercel/ncc">@vercel/ncc</a></summary>
+<summary>@vercel/ncc</summary>
 
-#### [ncc](https://github.com/vercel/ncc)
+[@vercel/ncc](https://github.com/vercel/ncc) is a command-line tool that compiles a Node.js project into a single file, bundling all its dependencies. It simplifies deployment by creating a compact, self-contained executable that doesn't require separate node_modules.
 
 ### Pros
 
@@ -118,7 +130,9 @@ A repository to test github actions with a different set of bundlers
 </details>
 
 <details>
-<summary><a href="https://vitejs.dev/">vite</a></summary>
+<summary>Vite</summary>
+
+[Vite](https://vitejs.dev) is a fast, modern build tool for web development that leverages native ES modules for quick server start and instant hot module replacement. It supports multiple frameworks, optimizes production builds, and offers features like TypeScript and CSS pre-processing out of the box.
 
 ### Pros
 
