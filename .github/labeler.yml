@@ -1,36 +1,40 @@
 # See https://github.com/actions/labeler
 
 "bundler: esbuild":
-  - any:
-      - actions/esbuild/**
+  - changed-files:
+      - any-glob-to-any-file: actions/esbuild/**
 
 "bundler: ncc":
-  - any:
-      - actions/ncc/**
+  - changed-files:
+      - any-glob-to-any-file: actions/ncc/**
 
 "bundler: webpack":
-  - any:
-      - actions/webpack/**
+  - changed-files:
+      - any-glob-to-any-file: actions/webpack/**
 
 "bundler: rollup":
-  - any:
-      - actions/rollup/**
+  - changed-files:
+      - any-glob-to-any-file: actions/rollup/**
 
 "bundler: tsup":
-  - any:
-      - actions/tsup/**
+  - changed-files:
+      - any-glob-to-any-file: actions/tsup/**
 
 "bundler: vite":
-  - any:
-      - actions/vite/**
+  - changed-files:
+      - any-glob-to-any-file: actions/vite/**
 
 "bundler: rolldown":
-  - any:
-      - actions/rolldown/**
+  - changed-files:
+      - any-glob-to-any-file: actions/rolldown/**
 
 "bundler: rspack":
-  - any:
-      - actions/rspack/**
+  - changed-files:
+      - any-glob-to-any-file: actions/rspack/**
+
+"bundler: swc":
+  - changed-files:
+      - any-glob-to-any-file: actions/swc/**
 
 🚨 ci:
   - any:
