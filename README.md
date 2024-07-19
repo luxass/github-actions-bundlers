@@ -2,6 +2,9 @@
 
 A repository to test github actions with a different set of bundlers
 
+> [!NOTE]
+> Each of the bundlers has its own set of pros and cons. Choose the one that best fits your project requirements.
+
 ## Bundlers
 
 <details>
