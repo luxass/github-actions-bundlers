@@ -1,12 +1,13 @@
+// @ts-check
+
 import { builtinModules } from "node:module";
 import { defineConfig } from "rolldown";
 
 export default defineConfig({
   input: "./src/index.ts",
   output: {
-    file: "dist/index.js",
     format: "cjs",
-    exports: "auto",
+    exports: "named",
   },
   resolve: {
     conditionNames: ["import"],
