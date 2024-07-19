@@ -1,0 +1,33 @@
+{
+  "name": "@github-actions-bundlers/hello-world-action-rolldown",
+  "version": "0.0.0",
+  "description": "A hello world github action using rolldown",
+  "author": {
+    "name": "Lucas Nørgård",
+    "email": "lucasnrgaard@gmail.com",
+    "url": "https://luxass.dev"
+  },
+  "packageManager": "pnpm@9.5.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luxass/github-actions-bundlers.git",
+    "directory": "actions/rolldown"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rolldown --config ./rolldown.config.mjs",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.1"
+  },
+  "devDependencies": {
+    "@luxass/eslint-config": "^4.9.0",
+    "@types/node": "^20.14.10",
+    "eslint": "^9.7.0",
+    "rolldown": "^0.12.1",
+    "typescript": "^5.5.3"
+  }
+}

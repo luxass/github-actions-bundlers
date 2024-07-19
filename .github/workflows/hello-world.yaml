@@ -30,6 +30,15 @@ jobs:
       - name: Hello World (ncc)
         uses: ./actions/ncc
         
+  rolldown:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4.1.7
+
+      - name: Hello World (rolldown)
+        uses: ./actions/rolldown
+        
   rollup:
     runs-on: ubuntu-latest
     steps:
