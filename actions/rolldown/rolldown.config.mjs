@@ -1,5 +1,4 @@
 // @ts-check
-
 import { builtinModules } from "node:module";
 import { defineConfig } from "rolldown";
 
@@ -8,6 +7,7 @@ export default defineConfig({
   output: {
     format: "cjs",
     exports: "named",
+    entryFileNames: "index.cjs",
   },
   resolve: {
     conditionNames: ["import"],

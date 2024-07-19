@@ -14,11 +14,12 @@
     "url": "https://github.com/luxass/github-actions-bundlers.git",
     "directory": "actions/rspack"
   },
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
   "scripts": {
     "build": "rspack build",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "clean": "git clean -xdf node_modules .turbo dist"
   },
   "dependencies": {
     "@actions/core": "^1.10.1"

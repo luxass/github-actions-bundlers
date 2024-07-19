@@ -8,7 +8,7 @@ export default defineConfig({
     rollupOptions: {
       input: ["src/index.ts"],
       output: {
-        entryFileNames: "index.js",
+        entryFileNames: "index.cjs",
         format: "cjs",
         exports: "auto",
       },

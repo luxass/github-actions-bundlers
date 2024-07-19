@@ -1,12 +1,13 @@
-const path = require("node:path");
+// @ts-check
+import path from "node:path";
 
-module.exports = {
+export default {
   target: "node",
   mode: "production",
   entry: "./src/index.ts",
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "index.js",
+    path: path.resolve(import.meta.dirname, "dist"),
+    filename: "index.cjs",
     library: {
       type: "commonjs2",
     },

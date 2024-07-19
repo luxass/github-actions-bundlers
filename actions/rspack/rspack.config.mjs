@@ -1,12 +1,14 @@
-const path = require("node:path");
+// @ts-check
+import { resolve } from "node:path";
 
-module.exports = {
+/** @type {import("@rspack/core").Configuration} */
+export default {
   target: "node",
   mode: "production",
   entry: "./src/index.ts",
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "index.js",
+    path: resolve(import.meta.dirname, "dist"),
+    filename: "index.cjs",
     library: {
       type: "commonjs2",
     },

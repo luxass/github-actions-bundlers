@@ -2,6 +2,7 @@
   "name": "@github-actions-bundlers/hello-world-action-tsup",
   "version": "0.0.0",
   "description": "A hello world github action using tsup",
+  "type": "module",
   "author": {
     "name": "Lucas Nørgård",
     "email": "lucasnrgaard@gmail.com",
@@ -14,11 +15,12 @@
     "url": "https://github.com/luxass/github-actions-bundlers.git",
     "directory": "actions/tsup"
   },
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
   "scripts": {
     "build": "tsup",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "clean": "git clean -xdf node_modules .turbo dist"
   },
   "dependencies": {
     "@actions/core": "^1.10.1"

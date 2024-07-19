@@ -12,4 +12,9 @@ export default defineConfig({
     "@actions/github",
   ],
   skipNodeModulesBundle: false,
+  outExtension() {
+    return {
+      js: ".cjs",
+    };
+  },
 });
