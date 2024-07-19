@@ -11,6 +11,15 @@ on:
 
 jobs:
 
+  bunchee:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4.1.7
+
+      - name: Hello World (bunchee)
+        uses: ./actions/bunchee
+
   esbuild:
     runs-on: ubuntu-latest
     steps:

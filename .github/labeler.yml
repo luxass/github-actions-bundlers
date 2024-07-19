@@ -32,6 +32,10 @@
   - changed-files:
       - any-glob-to-any-file: actions/rspack/**
 
+"bundler: bunchee":
+  - changed-files:
+      - any-glob-to-any-file: actions/bunchee/**
+
 🚨 ci:
   - changed-files:
       - any-glob-to-any-file: .github/workflows/**

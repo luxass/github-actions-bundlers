@@ -1,0 +1,11 @@
+name: Hello World Action (bunchee)
+description: An action that was bundled together using bunchee
+
+author: luxass
+branding:
+  color: purple
+  icon: package
+
+runs:
+  using: node20
+  main: dist/index.cjs
