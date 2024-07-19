@@ -10,13 +10,16 @@ importers:
     devDependencies:
       '@luxass/eslint-config':
         specifier: ^4.9.0
-        version: 4.9.0(@vue/compiler-sfc@3.4.31)(eslint@9.7.0)(typescript@5.5.3)(vitest@2.0.2(@types/node@20.14.10)(terser@5.31.2))
+        version: 4.9.0(@vue/compiler-sfc@3.4.31)(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint@9.7.0)(typescript@5.5.3)(vitest@2.0.2(@types/node@20.14.10)(terser@5.31.2))
       '@types/node':
         specifier: ^20.14.10
         version: 20.14.10
       eslint:
         specifier: ^9.7.0
         version: 9.7.0
+      eslint-plugin-format:
+        specifier: ^0.1.2
+        version: 0.1.2(eslint@9.7.0)
       tsup:
         specifier: ^8.1.0
         version: 8.1.0(postcss@8.4.39)(typescript@5.5.3)
@@ -38,7 +41,7 @@ importers:
     devDependencies:
       '@luxass/eslint-config':
         specifier: ^4.9.0
-        version: 4.9.0(@vue/compiler-sfc@3.4.31)(eslint@9.7.0)(typescript@5.5.3)(vitest@2.0.2(@types/node@20.14.10)(terser@5.31.2))
+        version: 4.9.0(@vue/compiler-sfc@3.4.31)(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint@9.7.0)(typescript@5.5.3)(vitest@2.0.2(@types/node@20.14.10)(terser@5.31.2))
       '@types/node':
         specifier: ^20.14.10
         version: 20.14.10
@@ -60,7 +63,7 @@ importers:
     devDependencies:
       '@luxass/eslint-config':
         specifier: ^4.9.0
-        version: 4.9.0(@vue/compiler-sfc@3.4.31)(eslint@9.7.0)(typescript@5.5.3)(vitest@2.0.2(@types/node@20.14.10)(terser@5.31.2))
+        version: 4.9.0(@vue/compiler-sfc@3.4.31)(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint@9.7.0)(typescript@5.5.3)(vitest@2.0.2(@types/node@20.14.10)(terser@5.31.2))
       '@types/node':
         specifier: ^20.14.10
         version: 20.14.10
@@ -82,7 +85,7 @@ importers:
     devDependencies:
       '@luxass/eslint-config':
         specifier: ^4.9.0
-        version: 4.9.0(@vue/compiler-sfc@3.4.31)(eslint@9.7.0)(typescript@5.5.3)(vitest@2.0.2(@types/node@20.14.10)(terser@5.31.2))
+        version: 4.9.0(@vue/compiler-sfc@3.4.31)(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint@9.7.0)(typescript@5.5.3)(vitest@2.0.2(@types/node@20.14.10)(terser@5.31.2))
       '@types/node':
         specifier: ^20.14.10
         version: 20.14.10
@@ -104,7 +107,7 @@ importers:
     devDependencies:
       '@luxass/eslint-config':
         specifier: ^4.9.0
-        version: 4.9.0(@vue/compiler-sfc@3.4.31)(eslint@9.7.0)(typescript@5.5.3)(vitest@2.0.2(@types/node@20.14.10)(terser@5.31.2))
+        version: 4.9.0(@vue/compiler-sfc@3.4.31)(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint@9.7.0)(typescript@5.5.3)(vitest@2.0.2(@types/node@20.14.10)(terser@5.31.2))
       '@rollup/plugin-commonjs':
         specifier: ^26.0.1
         version: 26.0.1(rollup@4.18.1)
@@ -141,7 +144,7 @@ importers:
     devDependencies:
       '@luxass/eslint-config':
         specifier: ^4.9.0
-        version: 4.9.0(@vue/compiler-sfc@3.4.31)(eslint@9.7.0)(typescript@5.5.3)(vitest@2.0.2(@types/node@20.14.10)(terser@5.31.2))
+        version: 4.9.0(@vue/compiler-sfc@3.4.31)(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint@9.7.0)(typescript@5.5.3)(vitest@2.0.2(@types/node@20.14.10)(terser@5.31.2))
       '@rspack/cli':
         specifier: ^1.0.0-alpha.5
         version: 1.0.0-alpha.5(@rspack/core@1.0.0-alpha.5)(@types/express@4.17.21)(webpack@5.93.0(esbuild@0.21.5))
@@ -166,7 +169,7 @@ importers:
     devDependencies:
       '@luxass/eslint-config':
         specifier: ^4.9.0
-        version: 4.9.0(@vue/compiler-sfc@3.4.31)(eslint@9.7.0)(typescript@5.5.3)(vitest@2.0.2(@types/node@20.14.10)(terser@5.31.2))
+        version: 4.9.0(@vue/compiler-sfc@3.4.31)(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint@9.7.0)(typescript@5.5.3)(vitest@2.0.2(@types/node@20.14.10)(terser@5.31.2))
       '@types/node':
         specifier: ^20.14.10
         version: 20.14.10
@@ -188,7 +191,7 @@ importers:
     devDependencies:
       '@luxass/eslint-config':
         specifier: ^4.9.0
-        version: 4.9.0(@vue/compiler-sfc@3.4.31)(eslint@9.7.0)(typescript@5.5.3)(vitest@2.0.2(@types/node@20.14.10)(terser@5.31.2))
+        version: 4.9.0(@vue/compiler-sfc@3.4.31)(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint@9.7.0)(typescript@5.5.3)(vitest@2.0.2(@types/node@20.14.10)(terser@5.31.2))
       '@types/node':
         specifier: ^20.14.10
         version: 20.14.10
@@ -210,7 +213,7 @@ importers:
     devDependencies:
       '@luxass/eslint-config':
         specifier: ^4.9.0
-        version: 4.9.0(@vue/compiler-sfc@3.4.31)(eslint@9.7.0)(typescript@5.5.3)(vitest@2.0.2(@types/node@20.14.10)(terser@5.31.2))
+        version: 4.9.0(@vue/compiler-sfc@3.4.31)(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint@9.7.0)(typescript@5.5.3)(vitest@2.0.2(@types/node@20.14.10)(terser@5.31.2))
       '@types/node':
         specifier: ^20.14.10
         version: 20.14.10
@@ -288,6 +291,15 @@ packages:
   '@discoveryjs/json-ext@0.5.7':
     resolution: {integrity: sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==}
     engines: {node: '>=10.0.0'}
+
+  '@dprint/formatter@0.3.0':
+    resolution: {integrity: sha512-N9fxCxbaBOrDkteSOzaCqwWjso5iAe+WJPsHC021JfHNj2ThInPNEF13ORDKta3llq5D1TlclODCvOvipH7bWQ==}
+
+  '@dprint/markdown@0.17.1':
+    resolution: {integrity: sha512-Mk9C9tHHSScB3JOUd2PEP3keWnJZ8Kqcd99qaVhknzhxgZF/gGTx0CMyd+lpsIV+Moe+OtbRnqAjp+hKVtT1zQ==}
+
+  '@dprint/toml@0.6.2':
+    resolution: {integrity: sha512-Mk5unEANsL/L+WHYU3NpDXt1ARU5bNU5k5OZELxaJodDycKG6RoRnSlZXpW6+7UN2PSnETAFVUdKrh937ZwtHA==}
 
   '@emnapi/core@1.2.0':
     resolution: {integrity: sha512-E7Vgw78I93we4ZWdYCb4DGAwRROGkMIXk7/y87UmANR+J6qsWusmC3gLt0H+O0KOt5e6O38U8oJamgbudrES/w==}
@@ -1812,6 +1824,11 @@ packages:
   eslint-flat-config-utils@0.2.5:
     resolution: {integrity: sha512-iO+yLZtC/LKgACerkpvsZ6NoRVB2sxT04mOpnNcEM1aTwKy+6TsT46PUvrML4y2uVBS6I67hRCd2JiKAPaL/Uw==}
 
+  eslint-formatting-reporter@0.0.0:
+    resolution: {integrity: sha512-k9RdyTqxqN/wNYVaTk/ds5B5rA8lgoAmvceYN7bcZMBwU7TuXx5ntewJv81eF3pIL/CiJE+pJZm36llG8yhyyw==}
+    peerDependencies:
+      eslint: '>=8.40.0'
+
   eslint-import-resolver-node@0.3.9:
     resolution: {integrity: sha512-WFj2isz22JahUv+B788TlO3N6zL3nNJGU8CcZbPZvVEkBPaJdCV4vy5wyghty5ROFbCRnm132v8BScu5/1BQ8g==}
 
@@ -1819,6 +1836,9 @@ packages:
     resolution: {integrity: sha512-IvRXXtEajLeyssvW4wJcZ2etxkR9mUf4zpNwgI+m/Uac9RfXHskuJefkHUcawVzePnd6xp24enp5jfgdHzjRdQ==}
     peerDependencies:
       eslint: '*'
+
+  eslint-parser-plain@0.1.0:
+    resolution: {integrity: sha512-oOeA6FWU0UJT/Rxc3XF5Cq0nbIZbylm7j8+plqq0CZoE6m4u32OXJrR+9iy4srGMmF6v6pmgvP1zPxSRIGh3sg==}
 
   eslint-plugin-antfu@2.3.4:
     resolution: {integrity: sha512-5RIjJpBK1tuNHuLyFyZ90/iW9s439dP1u2cxA4dH70djx9sKq1CqI+O6Q95aVjgFNTDtQzSC9uYdAD5uEEKciQ==}
@@ -1830,6 +1850,11 @@ packages:
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=8'
+
+  eslint-plugin-format@0.1.2:
+    resolution: {integrity: sha512-ZrcO3aiumgJ6ENAv65IWkPjtW77ML/5mp0YrRK0jdvvaZJb+4kKWbaQTMr/XbJo6CtELRmCApAziEKh7L2NbdQ==}
+    peerDependencies:
+      eslint: ^8.40.0 || ^9.0.0
 
   eslint-plugin-import-x@0.5.3:
     resolution: {integrity: sha512-hJ/wkMcsLQXAZL3+txXIDpbW5cqwdm1rLTqV4VRY03aIbzE3zWE7rPZKW6Gzf7xyl1u3V1iYC6tOG77d9NF4GQ==}
@@ -2016,6 +2041,9 @@ packages:
 
   fast-deep-equal@3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
+
+  fast-diff@1.3.0:
+    resolution: {integrity: sha512-VxPP4NqbUjj6MaAOafWeUn2cXWLcCtljklUtZf0Ind4XQ+QPtmA0b18zZy0jIQx+ExRVCR/ZQpBmik5lXshNsw==}
 
   fast-glob@3.3.1:
     resolution: {integrity: sha512-kNFPyjhh5cKjrUltxs+wFx+ZkbRaxxmZ+X0ZU31SOsxCEtP9VPgtq2teZw1DebupL5GmDaNQ6yKMMVcM41iqDg==}
@@ -2840,6 +2868,15 @@ packages:
   prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
+
+  prettier-linter-helpers@1.0.0:
+    resolution: {integrity: sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==}
+    engines: {node: '>=6.0.0'}
+
+  prettier@3.3.3:
+    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
+    engines: {node: '>=14'}
+    hasBin: true
 
   process-nextick-args@2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
@@ -3780,6 +3817,12 @@ snapshots:
 
   '@discoveryjs/json-ext@0.5.7': {}
 
+  '@dprint/formatter@0.3.0': {}
+
+  '@dprint/markdown@0.17.1': {}
+
+  '@dprint/toml@0.6.2': {}
+
   '@emnapi/core@1.2.0':
     dependencies:
       '@emnapi/wasi-threads': 1.0.1
@@ -4034,7 +4077,7 @@ snapshots:
 
   '@leichtgewicht/ip-codec@2.0.5': {}
 
-  '@luxass/eslint-config@4.9.0(@vue/compiler-sfc@3.4.31)(eslint@9.7.0)(typescript@5.5.3)(vitest@2.0.2(@types/node@20.14.10)(terser@5.31.2))':
+  '@luxass/eslint-config@4.9.0(@vue/compiler-sfc@3.4.31)(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint@9.7.0)(typescript@5.5.3)(vitest@2.0.2(@types/node@20.14.10)(terser@5.31.2))':
     dependencies:
       '@antfu/install-pkg': 0.3.3
       '@clack/prompts': 0.7.0
@@ -4067,6 +4110,8 @@ snapshots:
       toml-eslint-parser: 0.10.0
       vue-eslint-parser: 9.4.3(eslint@9.7.0)
       yaml-eslint-parser: 1.2.3
+    optionalDependencies:
+      eslint-plugin-format: 0.1.2(eslint@9.7.0)
     transitivePeerDependencies:
       - '@vue/compiler-sfc'
       - supports-color
@@ -5272,6 +5317,11 @@ snapshots:
       '@types/eslint': 8.56.10
       pathe: 1.1.2
 
+  eslint-formatting-reporter@0.0.0(eslint@9.7.0):
+    dependencies:
+      eslint: 9.7.0
+      prettier-linter-helpers: 1.0.0
+
   eslint-import-resolver-node@0.3.9:
     dependencies:
       debug: 3.2.7
@@ -5284,6 +5334,8 @@ snapshots:
     dependencies:
       eslint: 9.7.0
 
+  eslint-parser-plain@0.1.0: {}
+
   eslint-plugin-antfu@2.3.4(eslint@9.7.0):
     dependencies:
       '@antfu/utils': 0.7.10
@@ -5295,6 +5347,17 @@ snapshots:
       '@eslint-community/regexpp': 4.11.0
       eslint: 9.7.0
       eslint-compat-utils: 0.5.1(eslint@9.7.0)
+
+  eslint-plugin-format@0.1.2(eslint@9.7.0):
+    dependencies:
+      '@dprint/formatter': 0.3.0
+      '@dprint/markdown': 0.17.1
+      '@dprint/toml': 0.6.2
+      eslint: 9.7.0
+      eslint-formatting-reporter: 0.0.0(eslint@9.7.0)
+      eslint-parser-plain: 0.1.0
+      prettier: 3.3.3
+      synckit: 0.9.0
 
   eslint-plugin-import-x@0.5.3(eslint@9.7.0)(typescript@5.5.3):
     dependencies:
@@ -5615,6 +5678,8 @@ snapshots:
       - supports-color
 
   fast-deep-equal@3.1.3: {}
+
+  fast-diff@1.3.0: {}
 
   fast-glob@3.3.1:
     dependencies:
@@ -6358,6 +6423,12 @@ snapshots:
       source-map-js: 1.2.0
 
   prelude-ls@1.2.1: {}
+
+  prettier-linter-helpers@1.0.0:
+    dependencies:
+      fast-diff: 1.3.0
+
+  prettier@3.3.3: {}
 
   process-nextick-args@2.0.1: {}
 
