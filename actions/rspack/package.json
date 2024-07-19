@@ -2,6 +2,7 @@
   "name": "@github-actions-bundlers/hello-world-action-rspack",
   "version": "0.0.0",
   "description": "A hello world github action using rspack",
+  "type": "module",
   "author": {
     "name": "Lucas Nørgård",
     "email": "lucasnrgaard@gmail.com",
