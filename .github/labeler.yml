@@ -28,10 +28,6 @@
   - any:
       - actions/rolldown/**
 
-"bundler: tsc":
-  - any:
-      - actions/tsc/**
-
 "bundler: rspack":
   - any:
       - actions/rspack/**
