@@ -6,15 +6,6 @@ A repository to test github actions with a different set of bundlers
 
 If you want to create your own action, using one of these bundlers, there is a guide for each of them in the `README` of each folder.
 
-If you just want to get started as fast as possible, you can use the following steps:
-This will setup a new action using the `tsup` bundler.
-
-```bash
-npx degit luxass/github-action-template action-[your-action-name]
-cd action-[your-action-name]
-pnpm install
-```
-
 ## 📦 Bundlers
 
 > [!NOTE]

@@ -15,12 +15,16 @@ concurrency:
 
 jobs:
   build:
+    name: build - ${{ matrix.os }}
     strategy:
       matrix:
-        node: [20, 18]
+        os:
+          - ubuntu-latest
+          - windows-latest
+          - macos-latest
       fail-fast: false
 
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.7
@@ -31,7 +35,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v4.0.3
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 20
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
