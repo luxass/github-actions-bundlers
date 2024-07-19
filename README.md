@@ -12,4 +12,3 @@ A repository to test github actions with a different set of bundlers
 - [x] [ncc](https://github.com/vercel/ncc)
 - [x] [vite](https://vitejs.dev/)
 - [x] [rolldown](https://rolldown.rs/)
-- [x] [swc](https://swc.rs/)

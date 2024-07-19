@@ -32,10 +32,6 @@
   - changed-files:
       - any-glob-to-any-file: actions/rspack/**
 
-"bundler: swc":
-  - changed-files:
-      - any-glob-to-any-file: actions/swc/**
-
 🚨 ci:
   - any:
       - ".github/workflows/**"
