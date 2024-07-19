@@ -1,4 +1,3 @@
-
 name: Hello World
 
 on:
@@ -20,7 +19,7 @@ jobs:
 
       - name: Hello World (esbuild)
         uses: ./actions/esbuild
-        
+
   ncc:
     runs-on: ubuntu-latest
     steps:
@@ -29,7 +28,7 @@ jobs:
 
       - name: Hello World (ncc)
         uses: ./actions/ncc
-        
+
   rolldown:
     runs-on: ubuntu-latest
     steps:
@@ -38,7 +37,7 @@ jobs:
 
       - name: Hello World (rolldown)
         uses: ./actions/rolldown
-        
+
   rollup:
     runs-on: ubuntu-latest
     steps:
@@ -47,7 +46,7 @@ jobs:
 
       - name: Hello World (rollup)
         uses: ./actions/rollup
-        
+
   rspack:
     runs-on: ubuntu-latest
     steps:
@@ -56,7 +55,7 @@ jobs:
 
       - name: Hello World (rspack)
         uses: ./actions/rspack
-        
+
   tsup:
     runs-on: ubuntu-latest
     steps:
@@ -65,7 +64,7 @@ jobs:
 
       - name: Hello World (tsup)
         uses: ./actions/tsup
-        
+
   vite:
     runs-on: ubuntu-latest
     steps:
@@ -74,7 +73,7 @@ jobs:
 
       - name: Hello World (vite)
         uses: ./actions/vite
-        
+
   webpack:
     runs-on: ubuntu-latest
     steps:
@@ -83,4 +82,3 @@ jobs:
 
       - name: Hello World (webpack)
         uses: ./actions/webpack
-        

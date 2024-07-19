@@ -1,3 +1,4 @@
+import { exec } from "node:child_process";
 import { readdir, writeFile } from "node:fs/promises";
 
 let baseWorkflowFile = `
@@ -37,6 +38,13 @@ async function run() {
   }
 
   await writeFile("./.github/workflows/hello-world.yaml", baseWorkflowFile);
+  exec("npx eslint . --fix", (err, stdout, _stderr) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    console.log(stdout);
+  });
 }
 
 run().catch((err) => {
