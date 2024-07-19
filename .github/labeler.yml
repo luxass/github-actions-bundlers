@@ -33,5 +33,5 @@
       - any-glob-to-any-file: actions/rspack/**
 
 🚨 ci:
-  - any:
-      - ".github/workflows/**"
+  - changed-files:
+      - any-glob-to-any-file: .github/workflows/**
