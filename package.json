@@ -8,7 +8,7 @@
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@9.6.0",
+  "packageManager": "pnpm@9.7.1",
   "license": "MIT",
   "homepage": "https://github.com/luxass/github-actions-bundlers",
   "repository": {
@@ -28,8 +28,6 @@
     "lint": "turbo run lint --continue -- --cache --cache-location node_modules/.cache/.eslintcache",
     "lint:fix": "turbo run lint --continue -- --fix --cache --cache-location node_modules/.cache/.eslintcache",
     "lint:ws": "pnpm dlx sherif@latest",
-    "test": "turbo run test",
-    "test:watch": "turbo run test:watch",
     "typecheck": "turbo run typecheck",
     "clean": "git clean -xdf node_modules",
     "clean:workspaces": "turbo run clean",
@@ -37,13 +35,11 @@
     "update:actions": "tsx ./scripts/update-hello-world-workflow.ts"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "^4.10.0",
-    "@types/node": "^20.14.10",
-    "eslint": "^9.8.0",
-    "eslint-plugin-format": "^0.1.2",
-    "tsup": "^8.2.3",
-    "turbo": "^2.0.9",
-    "typescript": "^5.5.4",
-    "vitest": "^2.0.4"
+    "@luxass/eslint-config": "catalog:",
+    "@types/node": "catalog:",
+    "eslint": "catalog:",
+    "eslint-plugin-format": "catalog:",
+    "turbo": "^2.0.14",
+    "typescript": "^5.5.4"
   }
 }
