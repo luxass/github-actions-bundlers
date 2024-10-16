@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@luxass/eslint-config": "catalog:",
-    "@rspack/cli": "1.0.8",
+    "@rspack/cli": "1.0.10",
     "@rspack/core": "1.0.8",
     "@types/node": "catalog:",
     "eslint": "catalog:",
