@@ -32,7 +32,7 @@
     "eslint-plugin-format": "catalog:",
     "ts-loader": "^9.5.1",
     "typescript": "catalog:",
-    "webpack": "^5.96.1",
-    "webpack-cli": "^5.1.4"
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
   }
 }

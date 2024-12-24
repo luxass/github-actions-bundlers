@@ -27,14 +27,14 @@
   },
   "devDependencies": {
     "@luxass/eslint-config": "catalog:",
-    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-commonjs": "^28.0.2",
     "@rollup/plugin-json": "^6.1.0",
-    "@rollup/plugin-node-resolve": "^15.3.0",
-    "@rollup/plugin-typescript": "^12.1.1",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-typescript": "^12.1.2",
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "eslint-plugin-format": "catalog:",
-    "rollup": "^4.24.3",
+    "rollup": "^4.29.1",
     "tslib": "^2.8.1",
     "typescript": "catalog:"
   }

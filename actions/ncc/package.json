@@ -27,7 +27,7 @@
   "devDependencies": {
     "@luxass/eslint-config": "catalog:",
     "@types/node": "catalog:",
-    "@vercel/ncc": "^0.38.2",
+    "@vercel/ncc": "^0.38.3",
     "eslint": "catalog:",
     "eslint-plugin-format": "catalog:",
     "typescript": "catalog:"

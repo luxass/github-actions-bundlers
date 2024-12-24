@@ -30,7 +30,7 @@
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "eslint-plugin-format": "catalog:",
-    "rolldown": "^0.15.0",
+    "rolldown": "^0.15.1",
     "typescript": "catalog:"
   }
 }
