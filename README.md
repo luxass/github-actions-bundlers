@@ -78,7 +78,6 @@ If you want to create your own action, using one of these bundlers, there is a g
 ### Cons
 
 - Very new, may lack stability
-- Limited ecosystem compared to established bundlers
 
 </details>
 
