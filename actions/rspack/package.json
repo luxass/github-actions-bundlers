@@ -8,7 +8,7 @@
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@9.15.2",
+  "packageManager": "pnpm@9.15.4",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -27,8 +27,8 @@
   },
   "devDependencies": {
     "@luxass/eslint-config": "catalog:",
-    "@rspack/cli": "1.1.8",
-    "@rspack/core": "1.1.8",
+    "@rspack/cli": "1.2.2",
+    "@rspack/core": "1.2.2",
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "eslint-plugin-format": "catalog:",
