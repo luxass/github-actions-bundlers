@@ -36,7 +36,7 @@ var require_utils = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/
 	*/
 	function toCommandValue(input) {
 		if (input === null || input === undefined) return "";
-else if (typeof input === "string" || input instanceof String) return input;
+		else if (typeof input === "string" || input instanceof String) return input;
 		return JSON.stringify(input);
 	}
 	exports.toCommandValue = toCommandValue;
@@ -134,7 +134,7 @@ var require_command = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.
 					const val = this.properties[key];
 					if (val) {
 						if (first) first = false;
-else cmdStr += ",";
+						else cmdStr += ",";
 						cmdStr += `${key}=${escapeProperty(val)}`;
 					}
 				}
@@ -218,14 +218,14 @@ var require_proxy = __commonJS({ "../../node_modules/.pnpm/@actions+http-client@
 		if (checkBypass(reqUrl)) return undefined;
 		const proxyVar = (() => {
 			if (usingSsl) return process.env["https_proxy"] || process.env["HTTPS_PROXY"];
-else return process.env["http_proxy"] || process.env["HTTP_PROXY"];
+			else return process.env["http_proxy"] || process.env["HTTP_PROXY"];
 		})();
 		if (proxyVar) try {
 			return new URL(proxyVar);
 		} catch (_a$1) {
 			if (!proxyVar.startsWith("http://") && !proxyVar.startsWith("https://")) return new URL(`http://${proxyVar}`);
 		}
-else return undefined;
+		else return undefined;
 	}
 	exports.getProxyUrl = getProxyUrl$1;
 	function checkBypass(reqUrl) {
@@ -236,8 +236,8 @@ else return undefined;
 		if (!noProxy) return false;
 		let reqPort;
 		if (reqUrl.port) reqPort = Number(reqUrl.port);
-else if (reqUrl.protocol === "http:") reqPort = 80;
-else if (reqUrl.protocol === "https:") reqPort = 443;
+		else if (reqUrl.protocol === "http:") reqPort = 80;
+		else if (reqUrl.protocol === "https:") reqPort = 443;
 		const upperReqHosts = [reqUrl.hostname.toUpperCase()];
 		if (typeof reqPort === "number") upperReqHosts.push(`${upperReqHosts[0]}:${reqPort}`);
 		for (const upperNoProxyItem of noProxy.split(",").map((x) => x.trim().toUpperCase()).filter((x) => x)) if (upperNoProxyItem === "*" || upperReqHosts.some((x) => x === upperNoProxyItem || x.endsWith(`.${upperNoProxyItem}`) || upperNoProxyItem.startsWith(".") && x.endsWith(`${upperNoProxyItem}`))) return true;
@@ -445,10 +445,10 @@ var require_tunnel$1 = __commonJS({ "../../node_modules/.pnpm/tunnel@0.0.6/node_
 	if (process.env.NODE_DEBUG && /\btunnel\b/.test(process.env.NODE_DEBUG)) debug$1 = function() {
 		var args = Array.prototype.slice.call(arguments);
 		if (typeof args[0] === "string") args[0] = "TUNNEL: " + args[0];
-else args.unshift("TUNNEL:");
+		else args.unshift("TUNNEL:");
 		console.error.apply(console, args);
 	};
-else debug$1 = function() {};
+	else debug$1 = function() {};
 	exports.debug = debug$1;
 } });
 
@@ -761,7 +761,7 @@ var require_lib = __commonJS({ "../../node_modules/.pnpm/@actions+http-client@2.
 							break;
 						}
 						if (authenticationHandler) return authenticationHandler.handleAuthentication(this, info$1, data);
-else return response;
+						else return response;
 					}
 					let redirectsRemaining = this._maxRedirects;
 					while (response.message.statusCode && HttpRedirectCodes.includes(response.message.statusCode) && this._allowRedirects && redirectsRemaining > 0) {
@@ -804,8 +804,8 @@ else return response;
 				return new Promise((resolve, reject) => {
 					function callbackForResult(err, res) {
 						if (err) reject(err);
-else if (!res) reject(new Error("Unknown error"));
-else resolve(res);
+						else if (!res) reject(new Error("Unknown error"));
+						else resolve(res);
 					}
 					this.requestRawWithCallback(info$1, data, callbackForResult);
 				});
@@ -837,7 +837,7 @@ else resolve(res);
 			req.on("socket", (sock) => {
 				socket = sock;
 			});
-			req.setTimeout(this._socketTimeout || 18e4, () => {
+			req.setTimeout(this._socketTimeout || 3 * 6e4, () => {
 				if (socket) socket.end();
 				handleResult(new Error(`Request timeout: ${info$1.options.path}`));
 			});
@@ -909,7 +909,7 @@ else resolve(res);
 				let tunnelAgent;
 				const overHttps = proxyUrl.protocol === "https:";
 				if (usingSsl) tunnelAgent = overHttps ? tunnel.httpsOverHttps : tunnel.httpsOverHttp;
-else tunnelAgent = overHttps ? tunnel.httpOverHttps : tunnel.httpOverHttp;
+				else tunnelAgent = overHttps ? tunnel.httpOverHttps : tunnel.httpOverHttp;
 				agent = tunnelAgent(agentOptions);
 				this._proxyAgent = agent;
 			}
@@ -955,7 +955,7 @@ else tunnelAgent = overHttps ? tunnel.httpOverHttps : tunnel.httpOverHttp;
 						contents = yield res.readBody();
 						if (contents && contents.length > 0) {
 							if (options && options.deserializeDates) obj = JSON.parse(contents, dateTimeDeserializer);
-else obj = JSON.parse(contents);
+							else obj = JSON.parse(contents);
 							response.result = obj;
 						}
 						response.headers = res.message.headers;
@@ -963,8 +963,8 @@ else obj = JSON.parse(contents);
 					if (statusCode > 299) {
 						let msg;
 						if (obj && obj.message) msg = obj.message;
-else if (contents && contents.length > 0) msg = contents;
-else msg = `Failed request: (${statusCode})`;
+						else if (contents && contents.length > 0) msg = contents;
+						else msg = `Failed request: (${statusCode})`;
 						const err = new HttpClientError(msg, statusCode);
 						err.result = response.result;
 						reject(err);
@@ -1770,8 +1770,8 @@ var require_io = __commonJS({ "../../node_modules/.pnpm/@actions+io@1.1.3/node_m
 			if (!(yield ioUtil$1.exists(source))) throw new Error(`no such file or directory: ${source}`);
 			const sourceStat = yield ioUtil$1.stat(source);
 			if (sourceStat.isDirectory()) if (!recursive) throw new Error(`Failed to copy. ${source} is a directory, but tried to copy without recursive flag.`);
-else yield cpDirRecursive(source, newDest, 0, force);
-else {
+			else yield cpDirRecursive(source, newDest, 0, force);
+			else {
 				if (path$2.relative(source, newDest) === "") throw new Error(`'${newDest}' and '${source}' are the same file`);
 				yield copyFile(source, newDest, force);
 			}
@@ -1794,7 +1794,7 @@ else {
 					destExists = yield ioUtil$1.exists(dest);
 				}
 				if (destExists) if (options.force == null || options.force) yield rmRF(dest);
-else throw new Error("Destination already exists");
+				else throw new Error("Destination already exists");
 			}
 			yield mkdirP(path$2.dirname(dest));
 			yield ioUtil$1.rename(source, dest);
@@ -1852,7 +1852,7 @@ else throw new Error("Destination already exists");
 			if (check) {
 				const result = yield which(tool, false);
 				if (!result) if (ioUtil$1.IS_WINDOWS) throw new Error(`Unable to locate executable file: ${tool}. Please verify either the file path exists or the file can be found within a directory specified by the PATH environment variable. Also verify the file has a valid extension for an executable file.`);
-else throw new Error(`Unable to locate executable file: ${tool}. Please verify either the file path exists or the file can be found within a directory specified by the PATH environment variable. Also check the file mode to verify the file is executable.`);
+				else throw new Error(`Unable to locate executable file: ${tool}. Please verify either the file path exists or the file can be found within a directory specified by the PATH environment variable. Also check the file mode to verify the file is executable.`);
 				return result;
 			}
 			const matches = yield findInPath(tool);
@@ -1913,7 +1913,7 @@ else throw new Error(`Unable to locate executable file: ${tool}. Please verify e
 				const destFile = `${destDir}/${fileName}`;
 				const srcFileStat = yield ioUtil$1.lstat(srcFile);
 				if (srcFileStat.isDirectory()) yield cpDirRecursive(srcFile, destFile, currentDepth, force);
-else yield copyFile(srcFile, destFile, force);
+				else yield copyFile(srcFile, destFile, force);
 			}
 			yield ioUtil$1.chmod(destDir, (yield ioUtil$1.stat(sourceDir)).mode);
 		});
@@ -2031,7 +2031,7 @@ var require_toolrunner = __commonJS({ "../../node_modules/.pnpm/@actions+exec@1.
 				cmd += this._windowsQuoteCmdArg(toolPath);
 				for (const a of args) cmd += ` ${this._windowsQuoteCmdArg(a)}`;
 			}
-else {
+			else {
 				cmd += toolPath;
 				for (const a of args) cmd += ` ${a}`;
 			}
@@ -2118,7 +2118,7 @@ else {
 			for (let i = arg.length; i > 0; i--) {
 				reverse += arg[i - 1];
 				if (quoteHit && arg[i - 1] === "\\") reverse += "\\";
-else if (arg[i - 1] === "\"") {
+				else if (arg[i - 1] === "\"") {
 					quoteHit = true;
 					reverse += "\"";
 				} else quoteHit = false;
@@ -2135,7 +2135,7 @@ else if (arg[i - 1] === "\"") {
 			for (let i = arg.length; i > 0; i--) {
 				reverse += arg[i - 1];
 				if (quoteHit && arg[i - 1] === "\\") reverse += "\\";
-else if (arg[i - 1] === "\"") {
+				else if (arg[i - 1] === "\"") {
 					quoteHit = true;
 					reverse += "\\";
 				} else quoteHit = false;
@@ -2237,7 +2237,7 @@ else if (arg[i - 1] === "\"") {
 						if (errbuffer.length > 0) this.emit("errline", errbuffer);
 						cp$1.removeAllListeners();
 						if (error$1) reject(error$1);
-else resolve(exitCode);
+						else resolve(exitCode);
 					});
 					if (this.options.input) {
 						if (!cp$1.stdin) throw new Error("child process missing stdin");
@@ -2268,7 +2268,7 @@ else resolve(exitCode);
 			const c = argString.charAt(i);
 			if (c === "\"") {
 				if (!escaped) inQuotes = !inQuotes;
-else append(c);
+				else append(c);
 				continue;
 			}
 			if (c === "\\" && escaped) {
@@ -2311,7 +2311,7 @@ else append(c);
 		CheckComplete() {
 			if (this.done) return;
 			if (this.processClosed) this._setResult();
-else if (this.processExited) this.timeout = timers_1.setTimeout(ExecState.HandleTimeout, this.delay, this);
+			else if (this.processExited) this.timeout = timers_1.setTimeout(ExecState.HandleTimeout, this.delay, this);
 		}
 		_debug(message) {
 			this.emit("debug", message);
@@ -2320,8 +2320,8 @@ else if (this.processExited) this.timeout = timers_1.setTimeout(ExecState.Handle
 			let error$1;
 			if (this.processExited) {
 				if (this.processError) error$1 = new Error(`There was an error when attempting to execute the process '${this.toolPath}'. This may indicate the process failed to start. Error: ${this.processError}`);
-else if (this.processExitCode !== 0 && !this.options.ignoreReturnCode) error$1 = new Error(`The process '${this.toolPath}' failed with exit code ${this.processExitCode}`);
-else if (this.processStderr && this.options.failOnStdErr) error$1 = new Error(`The process '${this.toolPath}' failed because one or more lines were written to the STDERR stream`);
+				else if (this.processExitCode !== 0 && !this.options.ignoreReturnCode) error$1 = new Error(`The process '${this.toolPath}' failed with exit code ${this.processExitCode}`);
+				else if (this.processStderr && this.options.failOnStdErr) error$1 = new Error(`The process '${this.toolPath}' failed because one or more lines were written to the STDERR stream`);
 			}
 			if (this.timeout) {
 				clearTimeout(this.timeout);
@@ -2697,7 +2697,7 @@ var require_core = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/n
 	function addPath(inputPath) {
 		const filePath = process.env["GITHUB_PATH"] || "";
 		if (filePath) (0, file_command_1.issueFileCommand)("PATH", inputPath);
-else (0, command_1.issueCommand)("add-path", {}, inputPath);
+		else (0, command_1.issueCommand)("add-path", {}, inputPath);
 		process.env["PATH"] = `${inputPath}${path.delimiter}${process.env["PATH"]}`;
 	}
 	exports.addPath = addPath;
@@ -2954,17 +2954,17 @@ else (0, command_1.issueCommand)("add-path", {}, inputPath);
 	*/
 	exports.platform = __importStar(require_platform());
 } });
+var import_core = __toESM(require_core(), 1);
 
 //#endregion
 //#region src/index.ts
-var import_core = __toESM(require_core(), 1);
 async function run() {
 	try {
 		const data = await fetch("https://jsonplaceholder.typicode.com/todos/1").then((res) => res.json());
 		import_core.info(`fetched data: ${JSON.stringify(data)}`);
 	} catch (error$1) {
 		if (error$1 instanceof Error) import_core.setFailed(error$1.message);
-else import_core.setFailed("An unexpected error occurred");
+		else import_core.setFailed("An unexpected error occurred");
 	}
 }
 run().catch((err) => {

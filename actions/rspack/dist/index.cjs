@@ -1,6 +1,6 @@
 (() => { // webpackBootstrap
 var __webpack_modules__ = ({
-"173": (function (__unused_webpack_module, exports, __webpack_require__) {
+173: (function (__unused_webpack_module, exports, __webpack_require__) {
 "use strict";
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
@@ -100,7 +100,7 @@ function escapeProperty(s) {
 //# sourceMappingURL=command.js.map
 
 }),
-"235": (function (__unused_webpack_module, exports, __webpack_require__) {
+235: (function (__unused_webpack_module, exports, __webpack_require__) {
 "use strict";
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
@@ -448,7 +448,7 @@ exports.platform = __importStar(__webpack_require__(634));
 //# sourceMappingURL=core.js.map
 
 }),
-"414": (function (__unused_webpack_module, exports, __webpack_require__) {
+414: (function (__unused_webpack_module, exports, __webpack_require__) {
 "use strict";
 
 // For internal use, subject to change.
@@ -514,7 +514,7 @@ exports.prepareKeyValueMessage = prepareKeyValueMessage;
 //# sourceMappingURL=file-command.js.map
 
 }),
-"284": (function (__unused_webpack_module, exports, __webpack_require__) {
+284: (function (__unused_webpack_module, exports, __webpack_require__) {
 "use strict";
 
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
@@ -595,7 +595,7 @@ exports.OidcClient = OidcClient;
 //# sourceMappingURL=oidc-utils.js.map
 
 }),
-"468": (function (__unused_webpack_module, exports, __webpack_require__) {
+468: (function (__unused_webpack_module, exports, __webpack_require__) {
 "use strict";
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
@@ -661,7 +661,7 @@ exports.toPlatformPath = toPlatformPath;
 //# sourceMappingURL=path-utils.js.map
 
 }),
-"634": (function (__unused_webpack_module, exports, __webpack_require__) {
+634: (function (__unused_webpack_module, exports, __webpack_require__) {
 "use strict";
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
@@ -759,7 +759,7 @@ exports.getDetails = getDetails;
 //# sourceMappingURL=platform.js.map
 
 }),
-"607": (function (__unused_webpack_module, exports, __webpack_require__) {
+607: (function (__unused_webpack_module, exports, __webpack_require__) {
 "use strict";
 
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
@@ -1046,7 +1046,7 @@ exports.summary = _summary;
 //# sourceMappingURL=summary.js.map
 
 }),
-"933": (function (__unused_webpack_module, exports) {
+933: (function (__unused_webpack_module, exports) {
 "use strict";
 
 // We use any as a valid input type
@@ -1090,7 +1090,7 @@ exports.toCommandProperties = toCommandProperties;
 //# sourceMappingURL=utils.js.map
 
 }),
-"110": (function (__unused_webpack_module, exports, __webpack_require__) {
+110: (function (__unused_webpack_module, exports, __webpack_require__) {
 "use strict";
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
@@ -1197,7 +1197,7 @@ exports.getExecOutput = getExecOutput;
 //# sourceMappingURL=exec.js.map
 
 }),
-"513": (function (__unused_webpack_module, exports, __webpack_require__) {
+513: (function (__unused_webpack_module, exports, __webpack_require__) {
 "use strict";
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
@@ -1819,7 +1819,7 @@ class ExecState extends events.EventEmitter {
 //# sourceMappingURL=toolrunner.js.map
 
 }),
-"522": (function (__unused_webpack_module, exports) {
+522: (function (__unused_webpack_module, exports) {
 "use strict";
 
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
@@ -1904,7 +1904,7 @@ exports.PersonalAccessTokenCredentialHandler = PersonalAccessTokenCredentialHand
 //# sourceMappingURL=auth.js.map
 
 }),
-"379": (function (__unused_webpack_module, exports, __webpack_require__) {
+379: (function (__unused_webpack_module, exports, __webpack_require__) {
 "use strict";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -2526,7 +2526,7 @@ const lowercaseKeys = (obj) => Object.keys(obj).reduce((c, k) => ((c[k.toLowerCa
 //# sourceMappingURL=index.js.map
 
 }),
-"99": (function (__unused_webpack_module, exports) {
+99: (function (__unused_webpack_module, exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
@@ -2612,7 +2612,7 @@ function isLoopbackAddress(host) {
 //# sourceMappingURL=proxy.js.map
 
 }),
-"683": (function (__unused_webpack_module, exports, __webpack_require__) {
+683: (function (__unused_webpack_module, exports, __webpack_require__) {
 "use strict";
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
@@ -2799,7 +2799,7 @@ exports.getCmdPath = getCmdPath;
 //# sourceMappingURL=io-util.js.map
 
 }),
-"703": (function (__unused_webpack_module, exports, __webpack_require__) {
+703: (function (__unused_webpack_module, exports, __webpack_require__) {
 "use strict";
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
@@ -3102,12 +3102,12 @@ function copyFile(srcFile, destFile, force) {
 //# sourceMappingURL=io.js.map
 
 }),
-"785": (function (module, __unused_webpack_exports, __webpack_require__) {
+785: (function (module, __unused_webpack_exports, __webpack_require__) {
 module.exports = __webpack_require__(163);
 
 
 }),
-"163": (function (__unused_webpack_module, exports, __webpack_require__) {
+163: (function (__unused_webpack_module, exports, __webpack_require__) {
 "use strict";
 
 
@@ -3376,72 +3376,72 @@ exports.debug = debug; // for test
 
 
 }),
-"491": (function (module) {
+491: (function (module) {
 "use strict";
 module.exports = require("assert");
 
 }),
-"81": (function (module) {
+81: (function (module) {
 "use strict";
 module.exports = require("child_process");
 
 }),
-"113": (function (module) {
+113: (function (module) {
 "use strict";
 module.exports = require("crypto");
 
 }),
-"361": (function (module) {
+361: (function (module) {
 "use strict";
 module.exports = require("events");
 
 }),
-"147": (function (module) {
+147: (function (module) {
 "use strict";
 module.exports = require("fs");
 
 }),
-"685": (function (module) {
+685: (function (module) {
 "use strict";
 module.exports = require("http");
 
 }),
-"687": (function (module) {
+687: (function (module) {
 "use strict";
 module.exports = require("https");
 
 }),
-"808": (function (module) {
+808: (function (module) {
 "use strict";
 module.exports = require("net");
 
 }),
-"37": (function (module) {
+37: (function (module) {
 "use strict";
 module.exports = require("os");
 
 }),
-"17": (function (module) {
+17: (function (module) {
 "use strict";
 module.exports = require("path");
 
 }),
-"576": (function (module) {
+576: (function (module) {
 "use strict";
 module.exports = require("string_decoder");
 
 }),
-"512": (function (module) {
+512: (function (module) {
 "use strict";
 module.exports = require("timers");
 
 }),
-"404": (function (module) {
+404: (function (module) {
 "use strict";
 module.exports = require("tls");
 
 }),
-"837": (function (module) {
+837: (function (module) {
 "use strict";
 module.exports = require("util");
 
@@ -3507,7 +3507,7 @@ __webpack_require__.o = function (obj, prop) {
 })();
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry needs to be wrapped in an IIFE because it needs to be in strict mode.
 (() => {
 "use strict";
 
@@ -3515,7 +3515,7 @@ var __webpack_exports__ = {};
 const external_node_process_namespaceObject = require("node:process");
 var external_node_process_default = /*#__PURE__*/__webpack_require__.n(external_node_process_namespaceObject);
 // EXTERNAL MODULE: ../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/core.js
-var core = __webpack_require__("235");
+var core = __webpack_require__(235);
 ;// CONCATENATED MODULE: ./src/index.ts
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
     try {
