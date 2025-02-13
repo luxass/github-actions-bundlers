@@ -31,6 +31,6 @@
     "eslint": "catalog:",
     "eslint-plugin-format": "catalog:",
     "typescript": "catalog:",
-    "vite": "^6.0.6"
+    "vite": "catalog:"
   }
 }

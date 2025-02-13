@@ -39,7 +39,7 @@
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "eslint-plugin-format": "catalog:",
-    "turbo": "^2.3.3",
-    "typescript": "^5.7.2"
+    "turbo": "catalog:",
+    "typescript": "catalog:"
   }
 }

@@ -30,7 +30,7 @@
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "eslint-plugin-format": "catalog:",
-    "tsup": "^8.3.5",
+    "tsup": "catalog:",
     "typescript": "catalog:"
   }
 }

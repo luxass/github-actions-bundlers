@@ -30,9 +30,9 @@
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "eslint-plugin-format": "catalog:",
-    "ts-loader": "^9.5.1",
+    "ts-loader": "catalog:",
     "typescript": "catalog:",
-    "webpack": "^5.97.1",
-    "webpack-cli": "^6.0.1"
+    "webpack": "catalog:",
+    "webpack-cli": "catalog:"
   }
 }

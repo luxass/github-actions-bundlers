@@ -28,7 +28,7 @@
   "devDependencies": {
     "@luxass/eslint-config": "catalog:",
     "@types/node": "catalog:",
-    "bunchee": "^6.2.0",
+    "bunchee": "catalog:",
     "eslint": "catalog:",
     "eslint-plugin-format": "catalog:",
     "typescript": "catalog:"
