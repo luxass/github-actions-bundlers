@@ -102,9 +102,6 @@ importers:
       eslint:
         specifier: catalog:dev
         version: 9.24.0
-      eslint-plugin-format:
-        specifier: catalog:dev
-        version: 1.0.1(eslint@9.24.0)
       turbo:
         specifier: catalog:dev
         version: 2.5.0
