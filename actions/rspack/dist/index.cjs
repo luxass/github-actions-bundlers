@@ -3476,21 +3476,18 @@ return module.exports;
 // webpack/runtime/compat_get_default_export
 (() => {
 // getDefaultExport function for compatibility with non-ESM modules
-__webpack_require__.n = function (module) {
+__webpack_require__.n = (module) => {
 	var getter = module && module.__esModule ?
-		function () { return module['default']; } :
-		function () { return module; };
+		() => (module['default']) :
+		() => (module);
 	__webpack_require__.d(getter, { a: getter });
 	return getter;
 };
 
-
-
-
 })();
 // webpack/runtime/define_property_getters
 (() => {
-__webpack_require__.d = function(exports, definition) {
+__webpack_require__.d = (exports, definition) => {
 	for(var key in definition) {
         if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
             Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
@@ -3500,10 +3497,7 @@ __webpack_require__.d = function(exports, definition) {
 })();
 // webpack/runtime/has_own_property
 (() => {
-__webpack_require__.o = function (obj, prop) {
-	return Object.prototype.hasOwnProperty.call(obj, prop);
-};
-
+__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 })();
 /************************************************************************/
 var __webpack_exports__ = {};
