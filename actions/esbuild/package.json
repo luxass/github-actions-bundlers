@@ -23,14 +23,14 @@
     "clean": "git clean -xdf node_modules .turbo dist"
   },
   "dependencies": {
-    "@actions/core": "catalog:"
+    "@actions/core": "catalog:prod"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "catalog:",
-    "@types/node": "catalog:",
-    "esbuild": "catalog:",
-    "eslint": "catalog:",
-    "eslint-plugin-format": "catalog:",
-    "typescript": "catalog:"
+    "@luxass/eslint-config": "catalog:dev",
+    "@types/node": "catalog:dev",
+    "esbuild": "catalog:esbuild-bundler",
+    "eslint": "catalog:dev",
+    "eslint-plugin-format": "catalog:dev",
+    "typescript": "catalog:dev"
   }
 }
