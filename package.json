@@ -23,9 +23,9 @@
     "pnpm": ">=9.2.0"
   },
   "scripts": {
-    "build": "turbo run build --filter \"./packages/*\" --concurrency=15",
+    "build": "turbo run build --filter \"./actions/*\" --concurrency=15",
     "clean": "turbo run clean && git clean -xdf node_modules",
-    "dev": "turbo watch dev --filter \"./packages/*\"",
+    "dev": "turbo watch dev --filter \"./actions/*\"",
     "lint": "turbo run lint",
     "typecheck": "turbo run typecheck",
     "update:actions": "tsx ./scripts/update-hello-world-workflow.ts"
