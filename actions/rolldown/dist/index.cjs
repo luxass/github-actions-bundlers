@@ -35,7 +35,7 @@ var require_utils = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/
 	* @param input input to sanitize into a string
 	*/
 	function toCommandValue(input) {
-		if (input === null || input === undefined) return "";
+		if (input === null || input === void 0) return "";
 		else if (typeof input === "string" || input instanceof String) return input;
 		return JSON.stringify(input);
 	}
@@ -64,7 +64,7 @@ var require_utils = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/
 //#region ../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/command.js
 var require_command = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/command.js"(exports) {
 	var __createBinding$9 = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-		if (k2 === undefined) k2 = k;
+		if (k2 === void 0) k2 = k;
 		var desc = Object.getOwnPropertyDescriptor(m, k);
 		if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) desc = {
 			enumerable: true,
@@ -74,7 +74,7 @@ var require_command = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.
 		};
 		Object.defineProperty(o, k2, desc);
 	} : function(o, m, k, k2) {
-		if (k2 === undefined) k2 = k;
+		if (k2 === void 0) k2 = k;
 		o[k2] = m[k];
 	});
 	var __setModuleDefault$9 = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
@@ -155,7 +155,7 @@ var require_command = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.
 //#region ../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/file-command.js
 var require_file_command = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/file-command.js"(exports) {
 	var __createBinding$8 = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-		if (k2 === undefined) k2 = k;
+		if (k2 === void 0) k2 = k;
 		var desc = Object.getOwnPropertyDescriptor(m, k);
 		if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) desc = {
 			enumerable: true,
@@ -165,7 +165,7 @@ var require_file_command = __commonJS({ "../../node_modules/.pnpm/@actions+core@
 		};
 		Object.defineProperty(o, k2, desc);
 	} : function(o, m, k, k2) {
-		if (k2 === undefined) k2 = k;
+		if (k2 === void 0) k2 = k;
 		o[k2] = m[k];
 	});
 	var __setModuleDefault$8 = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
@@ -215,7 +215,7 @@ var require_proxy = __commonJS({ "../../node_modules/.pnpm/@actions+http-client@
 	exports.checkBypass = exports.getProxyUrl = void 0;
 	function getProxyUrl$1(reqUrl) {
 		const usingSsl = reqUrl.protocol === "https:";
-		if (checkBypass(reqUrl)) return undefined;
+		if (checkBypass(reqUrl)) return void 0;
 		const proxyVar = (() => {
 			if (usingSsl) return process.env["https_proxy"] || process.env["HTTPS_PROXY"];
 			else return process.env["http_proxy"] || process.env["HTTP_PROXY"];
@@ -225,7 +225,7 @@ var require_proxy = __commonJS({ "../../node_modules/.pnpm/@actions+http-client@
 		} catch (_a$1) {
 			if (!proxyVar.startsWith("http://") && !proxyVar.startsWith("https://")) return new URL(`http://${proxyVar}`);
 		}
-		else return undefined;
+		else return void 0;
 	}
 	exports.getProxyUrl = getProxyUrl$1;
 	function checkBypass(reqUrl) {
@@ -435,7 +435,7 @@ var require_tunnel$1 = __commonJS({ "../../node_modules/.pnpm/tunnel@0.0.6/node_
 				var keys = Object.keys(overrides);
 				for (var j = 0, keyLen = keys.length; j < keyLen; ++j) {
 					var k = keys[j];
-					if (overrides[k] !== undefined) target[k] = overrides[k];
+					if (overrides[k] !== void 0) target[k] = overrides[k];
 				}
 			}
 		}
@@ -462,7 +462,7 @@ var require_tunnel = __commonJS({ "../../node_modules/.pnpm/tunnel@0.0.6/node_mo
 //#region ../../node_modules/.pnpm/@actions+http-client@2.1.1/node_modules/@actions/http-client/lib/index.js
 var require_lib = __commonJS({ "../../node_modules/.pnpm/@actions+http-client@2.1.1/node_modules/@actions/http-client/lib/index.js"(exports) {
 	var __createBinding$7 = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-		if (k2 === undefined) k2 = k;
+		if (k2 === void 0) k2 = k;
 		Object.defineProperty(o, k2, {
 			enumerable: true,
 			get: function() {
@@ -470,7 +470,7 @@ var require_lib = __commonJS({ "../../node_modules/.pnpm/@actions+http-client@2.
 			}
 		});
 	} : function(o, m, k, k2) {
-		if (k2 === undefined) k2 = k;
+		if (k2 === void 0) k2 = k;
 		o[k2] = m[k];
 	});
 	var __setModuleDefault$7 = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
@@ -831,7 +831,7 @@ var require_lib = __commonJS({ "../../node_modules/.pnpm/@actions+http-client@2.
 			}
 			const req = info$1.httpModule.request(info$1.options, (msg) => {
 				const res = new HttpClientResponse(msg);
-				handleResult(undefined, res);
+				handleResult(void 0, res);
 			});
 			let socket;
 			req.on("socket", (sock) => {
@@ -1455,7 +1455,7 @@ var require_summary = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.
 //#region ../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/path-utils.js
 var require_path_utils = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/path-utils.js"(exports) {
 	var __createBinding$6 = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-		if (k2 === undefined) k2 = k;
+		if (k2 === void 0) k2 = k;
 		var desc = Object.getOwnPropertyDescriptor(m, k);
 		if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) desc = {
 			enumerable: true,
@@ -1465,7 +1465,7 @@ var require_path_utils = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.
 		};
 		Object.defineProperty(o, k2, desc);
 	} : function(o, m, k, k2) {
-		if (k2 === undefined) k2 = k;
+		if (k2 === void 0) k2 = k;
 		o[k2] = m[k];
 	});
 	var __setModuleDefault$6 = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
@@ -1528,7 +1528,7 @@ var require_path_utils = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.
 //#region ../../node_modules/.pnpm/@actions+io@1.1.3/node_modules/@actions/io/lib/io-util.js
 var require_io_util = __commonJS({ "../../node_modules/.pnpm/@actions+io@1.1.3/node_modules/@actions/io/lib/io-util.js"(exports) {
 	var __createBinding$5 = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-		if (k2 === undefined) k2 = k;
+		if (k2 === void 0) k2 = k;
 		Object.defineProperty(o, k2, {
 			enumerable: true,
 			get: function() {
@@ -1536,7 +1536,7 @@ var require_io_util = __commonJS({ "../../node_modules/.pnpm/@actions+io@1.1.3/n
 			}
 		});
 	} : function(o, m, k, k2) {
-		if (k2 === undefined) k2 = k;
+		if (k2 === void 0) k2 = k;
 		o[k2] = m[k];
 	});
 	var __setModuleDefault$5 = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
@@ -1630,7 +1630,7 @@ var require_io_util = __commonJS({ "../../node_modules/.pnpm/@actions+io@1.1.3/n
 	*/
 	function tryGetExecutablePath(filePath, extensions) {
 		return __awaiter$5(this, void 0, void 0, function* () {
-			let stats = undefined;
+			let stats = void 0;
 			try {
 				stats = yield exports.stat(filePath);
 			} catch (err) {
@@ -1645,7 +1645,7 @@ var require_io_util = __commonJS({ "../../node_modules/.pnpm/@actions+io@1.1.3/n
 			const originalFilePath = filePath;
 			for (const extension of extensions) {
 				filePath = originalFilePath + extension;
-				stats = undefined;
+				stats = void 0;
 				try {
 					stats = yield exports.stat(filePath);
 				} catch (err) {
@@ -1693,7 +1693,7 @@ var require_io_util = __commonJS({ "../../node_modules/.pnpm/@actions+io@1.1.3/n
 //#region ../../node_modules/.pnpm/@actions+io@1.1.3/node_modules/@actions/io/lib/io.js
 var require_io = __commonJS({ "../../node_modules/.pnpm/@actions+io@1.1.3/node_modules/@actions/io/lib/io.js"(exports) {
 	var __createBinding$4 = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-		if (k2 === undefined) k2 = k;
+		if (k2 === void 0) k2 = k;
 		Object.defineProperty(o, k2, {
 			enumerable: true,
 			get: function() {
@@ -1701,7 +1701,7 @@ var require_io = __commonJS({ "../../node_modules/.pnpm/@actions+io@1.1.3/node_m
 			}
 		});
 	} : function(o, m, k, k2) {
-		if (k2 === undefined) k2 = k;
+		if (k2 === void 0) k2 = k;
 		o[k2] = m[k];
 	});
 	var __setModuleDefault$4 = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
@@ -1941,7 +1941,7 @@ var require_io = __commonJS({ "../../node_modules/.pnpm/@actions+io@1.1.3/node_m
 //#region ../../node_modules/.pnpm/@actions+exec@1.1.1/node_modules/@actions/exec/lib/toolrunner.js
 var require_toolrunner = __commonJS({ "../../node_modules/.pnpm/@actions+exec@1.1.1/node_modules/@actions/exec/lib/toolrunner.js"(exports) {
 	var __createBinding$3 = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-		if (k2 === undefined) k2 = k;
+		if (k2 === void 0) k2 = k;
 		Object.defineProperty(o, k2, {
 			enumerable: true,
 			get: function() {
@@ -1949,7 +1949,7 @@ var require_toolrunner = __commonJS({ "../../node_modules/.pnpm/@actions+exec@1.
 			}
 		});
 	} : function(o, m, k, k2) {
-		if (k2 === undefined) k2 = k;
+		if (k2 === void 0) k2 = k;
 		o[k2] = m[k];
 	});
 	var __setModuleDefault$3 = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
@@ -2345,7 +2345,7 @@ var require_toolrunner = __commonJS({ "../../node_modules/.pnpm/@actions+exec@1.
 //#region ../../node_modules/.pnpm/@actions+exec@1.1.1/node_modules/@actions/exec/lib/exec.js
 var require_exec = __commonJS({ "../../node_modules/.pnpm/@actions+exec@1.1.1/node_modules/@actions/exec/lib/exec.js"(exports) {
 	var __createBinding$2 = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-		if (k2 === undefined) k2 = k;
+		if (k2 === void 0) k2 = k;
 		Object.defineProperty(o, k2, {
 			enumerable: true,
 			get: function() {
@@ -2353,7 +2353,7 @@ var require_exec = __commonJS({ "../../node_modules/.pnpm/@actions+exec@1.1.1/no
 			}
 		});
 	} : function(o, m, k, k2) {
-		if (k2 === undefined) k2 = k;
+		if (k2 === void 0) k2 = k;
 		o[k2] = m[k];
 	});
 	var __setModuleDefault$2 = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
@@ -2473,7 +2473,7 @@ var require_exec = __commonJS({ "../../node_modules/.pnpm/@actions+exec@1.1.1/no
 //#region ../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/platform.js
 var require_platform = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/platform.js"(exports) {
 	var __createBinding$1 = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-		if (k2 === undefined) k2 = k;
+		if (k2 === void 0) k2 = k;
 		var desc = Object.getOwnPropertyDescriptor(m, k);
 		if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) desc = {
 			enumerable: true,
@@ -2483,7 +2483,7 @@ var require_platform = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11
 		};
 		Object.defineProperty(o, k2, desc);
 	} : function(o, m, k, k2) {
-		if (k2 === undefined) k2 = k;
+		if (k2 === void 0) k2 = k;
 		o[k2] = m[k];
 	});
 	var __setModuleDefault$1 = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
@@ -2538,8 +2538,8 @@ var require_platform = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11
 	const os_1 = __importDefault(require("os"));
 	const exec = __importStar$1(require_exec());
 	const getWindowsInfo = () => __awaiter$1(void 0, void 0, void 0, function* () {
-		const { stdout: version } = yield exec.getExecOutput("powershell -command \"(Get-CimInstance -ClassName Win32_OperatingSystem).Version\"", undefined, { silent: true });
-		const { stdout: name } = yield exec.getExecOutput("powershell -command \"(Get-CimInstance -ClassName Win32_OperatingSystem).Caption\"", undefined, { silent: true });
+		const { stdout: version } = yield exec.getExecOutput("powershell -command \"(Get-CimInstance -ClassName Win32_OperatingSystem).Version\"", void 0, { silent: true });
+		const { stdout: name } = yield exec.getExecOutput("powershell -command \"(Get-CimInstance -ClassName Win32_OperatingSystem).Caption\"", void 0, { silent: true });
 		return {
 			name: name.trim(),
 			version: version.trim()
@@ -2547,7 +2547,7 @@ var require_platform = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11
 	});
 	const getMacOsInfo = () => __awaiter$1(void 0, void 0, void 0, function* () {
 		var _a$1, _b, _c, _d;
-		const { stdout } = yield exec.getExecOutput("sw_vers", undefined, { silent: true });
+		const { stdout } = yield exec.getExecOutput("sw_vers", void 0, { silent: true });
 		const version = (_b = (_a$1 = stdout.match(/ProductVersion:\s*(.+)/)) === null || _a$1 === void 0 ? void 0 : _a$1[1]) !== null && _b !== void 0 ? _b : "";
 		const name = (_d = (_c = stdout.match(/ProductName:\s*(.+)/)) === null || _c === void 0 ? void 0 : _c[1]) !== null && _d !== void 0 ? _d : "";
 		return {
@@ -2590,7 +2590,7 @@ var require_platform = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11
 //#region ../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/core.js
 var require_core = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/core.js"(exports) {
 	var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-		if (k2 === undefined) k2 = k;
+		if (k2 === void 0) k2 = k;
 		var desc = Object.getOwnPropertyDescriptor(m, k);
 		if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) desc = {
 			enumerable: true,
@@ -2600,7 +2600,7 @@ var require_core = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/n
 		};
 		Object.defineProperty(o, k2, desc);
 	} : function(o, m, k, k2) {
-		if (k2 === undefined) k2 = k;
+		if (k2 === void 0) k2 = k;
 		o[k2] = m[k];
 	});
 	var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
@@ -2755,7 +2755,7 @@ var require_core = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/n
 		const val = getInput(name, options);
 		if (trueValue.includes(val)) return true;
 		if (falseValue.includes(val)) return false;
-		throw new TypeError(`Input does not meet YAML 1.2 "Core Schema" specification: ${name}\n` + `Support boolean input list: \`true | True | TRUE | false | False | FALSE\``);
+		throw new TypeError(`Input does not meet YAML 1.2 "Core Schema" specification: ${name}\nSupport boolean input list: \`true | True | TRUE | false | False | FALSE\``);
 	}
 	exports.getBooleanInput = getBooleanInput;
 	/**

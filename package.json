@@ -8,7 +8,7 @@
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@10.5.2",
+  "packageManager": "pnpm@10.7.1",
   "license": "MIT",
   "homepage": "https://github.com/luxass/github-actions-bundlers",
   "repository": {
@@ -23,21 +23,18 @@
     "pnpm": ">=9.2.0"
   },
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint --continue -- --cache --cache-location node_modules/.cache/.eslintcache && manypkg check",
-    "lint:fix": "turbo run lint --continue -- --fix --cache --cache-location node_modules/.cache/.eslintcache",
-    "typecheck": "turbo run typecheck",
+    "build": "turbo run build --filter \"./actions/*\" --concurrency=15",
     "clean": "turbo run clean && git clean -xdf node_modules",
+    "dev": "turbo watch dev --filter \"./actions/*\"",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
     "update:actions": "tsx ./scripts/update-hello-world-workflow.ts"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "catalog:",
-    "@manypkg/cli": "catalog:",
-    "@types/node": "catalog:",
-    "eslint": "catalog:",
-    "eslint-plugin-format": "catalog:",
-    "turbo": "catalog:",
-    "typescript": "catalog:"
+    "@luxass/eslint-config": "catalog:dev",
+    "@types/node": "catalog:dev",
+    "eslint": "catalog:dev",
+    "turbo": "catalog:dev",
+    "typescript": "catalog:dev"
   }
 }

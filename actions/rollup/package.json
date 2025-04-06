@@ -8,7 +8,7 @@
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@10.5.2",
+  "packageManager": "pnpm@10.7.1",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -23,19 +23,19 @@
     "clean": "git clean -xdf node_modules .turbo dist"
   },
   "dependencies": {
-    "@actions/core": "catalog:"
+    "@actions/core": "catalog:prod"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "catalog:",
-    "@rollup/plugin-commonjs": "catalog:",
-    "@rollup/plugin-json": "catalog:",
-    "@rollup/plugin-node-resolve": "catalog:",
-    "@rollup/plugin-typescript": "catalog:",
-    "@types/node": "catalog:",
-    "eslint": "catalog:",
-    "eslint-plugin-format": "catalog:",
-    "rollup": "catalog:",
-    "tslib": "catalog:",
-    "typescript": "catalog:"
+    "@luxass/eslint-config": "catalog:dev",
+    "@rollup/plugin-commonjs": "catalog:rollup-bundler",
+    "@rollup/plugin-json": "catalog:rollup-bundler",
+    "@rollup/plugin-node-resolve": "catalog:rollup-bundler",
+    "@rollup/plugin-typescript": "catalog:rollup-bundler",
+    "@types/node": "catalog:dev",
+    "eslint": "catalog:dev",
+    "eslint-plugin-format": "catalog:dev",
+    "rollup": "catalog:rollup-bundler",
+    "tslib": "catalog:rollup-bundler",
+    "typescript": "catalog:dev"
   }
 }

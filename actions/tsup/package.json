@@ -8,7 +8,7 @@
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@10.5.2",
+  "packageManager": "pnpm@10.7.1",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -23,14 +23,14 @@
     "clean": "git clean -xdf node_modules .turbo dist"
   },
   "dependencies": {
-    "@actions/core": "catalog:"
+    "@actions/core": "catalog:prod"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "catalog:",
-    "@types/node": "catalog:",
-    "eslint": "catalog:",
-    "eslint-plugin-format": "catalog:",
-    "tsup": "catalog:",
-    "typescript": "catalog:"
+    "@luxass/eslint-config": "catalog:dev",
+    "@types/node": "catalog:dev",
+    "eslint": "catalog:dev",
+    "eslint-plugin-format": "catalog:dev",
+    "tsup": "catalog:tsup-bundler",
+    "typescript": "catalog:dev"
   }
 }
