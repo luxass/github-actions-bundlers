@@ -370,7 +370,7 @@ var require_tunnel$1 = __commonJS({ "../../node_modules/.pnpm/tunnel@0.0.6/node_
 			if (res.statusCode !== 200) {
 				debug$1("tunneling socket could not be established, statusCode=%d", res.statusCode);
 				socket.destroy();
-				var error$1 = new Error("tunneling socket could not be established, statusCode=" + res.statusCode);
+				var error$1 = /* @__PURE__ */ new Error("tunneling socket could not be established, statusCode=" + res.statusCode);
 				error$1.code = "ECONNRESET";
 				options.request.emit("error", error$1);
 				self.removeSocket(placeholder);
@@ -379,7 +379,7 @@ var require_tunnel$1 = __commonJS({ "../../node_modules/.pnpm/tunnel@0.0.6/node_
 			if (head.length > 0) {
 				debug$1("got illegal response body from proxy");
 				socket.destroy();
-				var error$1 = new Error("got illegal response body from proxy");
+				var error$1 = /* @__PURE__ */ new Error("got illegal response body from proxy");
 				error$1.code = "ECONNRESET";
 				options.request.emit("error", error$1);
 				self.removeSocket(placeholder);
@@ -392,7 +392,7 @@ var require_tunnel$1 = __commonJS({ "../../node_modules/.pnpm/tunnel@0.0.6/node_
 		function onError(cause) {
 			connectReq.removeAllListeners();
 			debug$1("tunneling socket could not be established, cause=%s\n", cause.message, cause.stack);
-			var error$1 = new Error("tunneling socket could not be established, cause=" + cause.message);
+			var error$1 = /* @__PURE__ */ new Error("tunneling socket could not be established, cause=" + cause.message);
 			error$1.code = "ECONNRESET";
 			options.request.emit("error", error$1);
 			self.removeSocket(placeholder);
@@ -804,7 +804,7 @@ var require_lib = __commonJS({ "../../node_modules/.pnpm/@actions+http-client@2.
 				return new Promise((resolve, reject) => {
 					function callbackForResult(err, res) {
 						if (err) reject(err);
-						else if (!res) reject(new Error("Unknown error"));
+						else if (!res) reject(/* @__PURE__ */ new Error("Unknown error"));
 						else resolve(res);
 					}
 					this.requestRawWithCallback(info$1, data, callbackForResult);
@@ -839,7 +839,7 @@ var require_lib = __commonJS({ "../../node_modules/.pnpm/@actions+http-client@2.
 			});
 			req.setTimeout(this._socketTimeout || 3 * 6e4, () => {
 				if (socket) socket.end();
-				handleResult(new Error(`Request timeout: ${info$1.options.path}`));
+				handleResult(/* @__PURE__ */ new Error(`Request timeout: ${info$1.options.path}`));
 			});
 			req.on("error", function(err) {
 				handleResult(err);
@@ -2190,7 +2190,7 @@ var require_toolrunner = __commonJS({ "../../node_modules/.pnpm/@actions+exec@1.
 					state.on("debug", (message) => {
 						this._debug(message);
 					});
-					if (this.options.cwd && !(yield ioUtil.exists(this.options.cwd))) return reject(new Error(`The cwd: ${this.options.cwd} does not exist!`));
+					if (this.options.cwd && !(yield ioUtil.exists(this.options.cwd))) return reject(/* @__PURE__ */ new Error(`The cwd: ${this.options.cwd} does not exist!`));
 					const fileName = this._getSpawnFileName();
 					const cp$1 = child.spawn(fileName, this._getSpawnArgs(optionsNonNull), this._getSpawnOptions(this.options, fileName));
 					let stdbuffer = "";
@@ -2319,9 +2319,9 @@ var require_toolrunner = __commonJS({ "../../node_modules/.pnpm/@actions+exec@1.
 		_setResult() {
 			let error$1;
 			if (this.processExited) {
-				if (this.processError) error$1 = new Error(`There was an error when attempting to execute the process '${this.toolPath}'. This may indicate the process failed to start. Error: ${this.processError}`);
-				else if (this.processExitCode !== 0 && !this.options.ignoreReturnCode) error$1 = new Error(`The process '${this.toolPath}' failed with exit code ${this.processExitCode}`);
-				else if (this.processStderr && this.options.failOnStdErr) error$1 = new Error(`The process '${this.toolPath}' failed because one or more lines were written to the STDERR stream`);
+				if (this.processError) error$1 = /* @__PURE__ */ new Error(`There was an error when attempting to execute the process '${this.toolPath}'. This may indicate the process failed to start. Error: ${this.processError}`);
+				else if (this.processExitCode !== 0 && !this.options.ignoreReturnCode) error$1 = /* @__PURE__ */ new Error(`The process '${this.toolPath}' failed with exit code ${this.processExitCode}`);
+				else if (this.processStderr && this.options.failOnStdErr) error$1 = /* @__PURE__ */ new Error(`The process '${this.toolPath}' failed because one or more lines were written to the STDERR stream`);
 			}
 			if (this.timeout) {
 				clearTimeout(this.timeout);
@@ -2954,10 +2954,10 @@ var require_core = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/n
 	*/
 	exports.platform = __importStar(require_platform());
 } });
-var import_core = __toESM(require_core(), 1);
 
 //#endregion
 //#region src/index.ts
+var import_core = __toESM(require_core(), 1);
 async function run() {
 	try {
 		const data = await fetch("https://jsonplaceholder.typicode.com/todos/1").then((res) => res.json());
