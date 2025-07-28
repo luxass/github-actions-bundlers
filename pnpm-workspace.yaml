@@ -8,16 +8,16 @@ catalogs:
 
   # general dev dependencies
   dev:
-    "@luxass/eslint-config": ^5.1.0
+    "@luxass/eslint-config": ^5.1.1
     "@types/node": ^22.0.0
-    eslint: ^9.30.1
+    eslint: ^9.32.0
     eslint-plugin-format: ^1.0.1
-    turbo: ^2.5.4
+    turbo: ^2.5.5
     typescript: ^5.8.3
 
   # esbuild specific dependencies
   esbuild-bundler:
-    esbuild: ^0.25.5
+    esbuild: ^0.25.8
 
   # ncc specific dependencies
   ncc-bundler:
@@ -29,7 +29,7 @@ catalogs:
 
   # rolldown specific dependencies
   rolldown-bundler:
-    rolldown: ^1.0.0-beta.23
+    rolldown: ^1.0.0-beta.29
 
   # rollup specific dependencies
   rollup-bundler:
@@ -37,13 +37,13 @@ catalogs:
     "@rollup/plugin-json": ^6.1.0
     "@rollup/plugin-node-resolve": ^16.0.1
     "@rollup/plugin-typescript": ^12.1.4
-    rollup: ^4.44.1
+    rollup: ^4.46.0
     tslib: ^2.8.1
 
   # rspack specific dependencies
   rspack-bundler:
-    "@rspack/cli": ^1.4.2
-    "@rspack/core": ^1.4.2
+    "@rspack/cli": ^1.4.10
+    "@rspack/core": ^1.4.10
 
   # tsup specific dependencies
   tsup-bundler:
@@ -51,12 +51,12 @@ catalogs:
 
   # vite specific dependencies
   vite-bundler:
-    vite: ^7.0.1
+    vite: ^7.0.6
 
   # webpack specific dependencies
   webpack-bundler:
     ts-loader: ^9.5.2
-    webpack: ^5.99.9
+    webpack: ^5.100.2
     webpack-cli: ^6.0.1
 
 onlyBuiltDependencies:
