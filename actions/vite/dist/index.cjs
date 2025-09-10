@@ -52,7 +52,7 @@ var hasRequiredCommand;
 function requireCommand() {
   if (hasRequiredCommand) return command;
   hasRequiredCommand = 1;
-  var __createBinding = command && command.__createBinding || (Object.create ? function(o, m, k, k2) {
+  var __createBinding = command && command.__createBinding || (Object.create ? (function(o, m, k, k2) {
     if (k2 === void 0) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
     if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -61,13 +61,13 @@ function requireCommand() {
       } };
     }
     Object.defineProperty(o, k2, desc);
-  } : function(o, m, k, k2) {
+  }) : (function(o, m, k, k2) {
     if (k2 === void 0) k2 = k;
     o[k2] = m[k];
-  });
-  var __setModuleDefault = command && command.__setModuleDefault || (Object.create ? function(o, v) {
+  }));
+  var __setModuleDefault = command && command.__setModuleDefault || (Object.create ? (function(o, v) {
     Object.defineProperty(o, "default", { enumerable: true, value: v });
-  } : function(o, v) {
+  }) : function(o, v) {
     o["default"] = v;
   });
   var __importStar = command && command.__importStar || function(mod) {
@@ -138,7 +138,7 @@ var hasRequiredFileCommand;
 function requireFileCommand() {
   if (hasRequiredFileCommand) return fileCommand;
   hasRequiredFileCommand = 1;
-  var __createBinding = fileCommand && fileCommand.__createBinding || (Object.create ? function(o, m, k, k2) {
+  var __createBinding = fileCommand && fileCommand.__createBinding || (Object.create ? (function(o, m, k, k2) {
     if (k2 === void 0) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
     if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -147,13 +147,13 @@ function requireFileCommand() {
       } };
     }
     Object.defineProperty(o, k2, desc);
-  } : function(o, m, k, k2) {
+  }) : (function(o, m, k, k2) {
     if (k2 === void 0) k2 = k;
     o[k2] = m[k];
-  });
-  var __setModuleDefault = fileCommand && fileCommand.__setModuleDefault || (Object.create ? function(o, v) {
+  }));
+  var __setModuleDefault = fileCommand && fileCommand.__setModuleDefault || (Object.create ? (function(o, v) {
     Object.defineProperty(o, "default", { enumerable: true, value: v });
-  } : function(o, v) {
+  }) : function(o, v) {
     o["default"] = v;
   });
   var __importStar = fileCommand && fileCommand.__importStar || function(mod) {
@@ -510,18 +510,18 @@ function requireLib() {
   if (hasRequiredLib) return lib;
   hasRequiredLib = 1;
   (function(exports2) {
-    var __createBinding = lib && lib.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = lib && lib.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       Object.defineProperty(o, k2, { enumerable: true, get: function() {
         return m[k];
       } });
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = lib && lib.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = lib && lib.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = lib && lib.__importStar || function(mod) {
@@ -1596,7 +1596,7 @@ var hasRequiredPathUtils;
 function requirePathUtils() {
   if (hasRequiredPathUtils) return pathUtils;
   hasRequiredPathUtils = 1;
-  var __createBinding = pathUtils && pathUtils.__createBinding || (Object.create ? function(o, m, k, k2) {
+  var __createBinding = pathUtils && pathUtils.__createBinding || (Object.create ? (function(o, m, k, k2) {
     if (k2 === void 0) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
     if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -1605,13 +1605,13 @@ function requirePathUtils() {
       } };
     }
     Object.defineProperty(o, k2, desc);
-  } : function(o, m, k, k2) {
+  }) : (function(o, m, k, k2) {
     if (k2 === void 0) k2 = k;
     o[k2] = m[k];
-  });
-  var __setModuleDefault = pathUtils && pathUtils.__setModuleDefault || (Object.create ? function(o, v) {
+  }));
+  var __setModuleDefault = pathUtils && pathUtils.__setModuleDefault || (Object.create ? (function(o, v) {
     Object.defineProperty(o, "default", { enumerable: true, value: v });
-  } : function(o, v) {
+  }) : function(o, v) {
     o["default"] = v;
   });
   var __importStar = pathUtils && pathUtils.__importStar || function(mod) {
@@ -1650,18 +1650,18 @@ function requireIoUtil() {
   if (hasRequiredIoUtil) return ioUtil;
   hasRequiredIoUtil = 1;
   (function(exports2) {
-    var __createBinding = ioUtil && ioUtil.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = ioUtil && ioUtil.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       Object.defineProperty(o, k2, { enumerable: true, get: function() {
         return m[k];
       } });
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = ioUtil && ioUtil.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = ioUtil && ioUtil.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = ioUtil && ioUtil.__importStar || function(mod) {
@@ -1823,18 +1823,18 @@ var hasRequiredIo;
 function requireIo() {
   if (hasRequiredIo) return io;
   hasRequiredIo = 1;
-  var __createBinding = io && io.__createBinding || (Object.create ? function(o, m, k, k2) {
+  var __createBinding = io && io.__createBinding || (Object.create ? (function(o, m, k, k2) {
     if (k2 === void 0) k2 = k;
     Object.defineProperty(o, k2, { enumerable: true, get: function() {
       return m[k];
     } });
-  } : function(o, m, k, k2) {
+  }) : (function(o, m, k, k2) {
     if (k2 === void 0) k2 = k;
     o[k2] = m[k];
-  });
-  var __setModuleDefault = io && io.__setModuleDefault || (Object.create ? function(o, v) {
+  }));
+  var __setModuleDefault = io && io.__setModuleDefault || (Object.create ? (function(o, v) {
     Object.defineProperty(o, "default", { enumerable: true, value: v });
-  } : function(o, v) {
+  }) : function(o, v) {
     o["default"] = v;
   });
   var __importStar = io && io.__importStar || function(mod) {
@@ -2070,18 +2070,18 @@ var hasRequiredToolrunner;
 function requireToolrunner() {
   if (hasRequiredToolrunner) return toolrunner;
   hasRequiredToolrunner = 1;
-  var __createBinding = toolrunner && toolrunner.__createBinding || (Object.create ? function(o, m, k, k2) {
+  var __createBinding = toolrunner && toolrunner.__createBinding || (Object.create ? (function(o, m, k, k2) {
     if (k2 === void 0) k2 = k;
     Object.defineProperty(o, k2, { enumerable: true, get: function() {
       return m[k];
     } });
-  } : function(o, m, k, k2) {
+  }) : (function(o, m, k, k2) {
     if (k2 === void 0) k2 = k;
     o[k2] = m[k];
-  });
-  var __setModuleDefault = toolrunner && toolrunner.__setModuleDefault || (Object.create ? function(o, v) {
+  }));
+  var __setModuleDefault = toolrunner && toolrunner.__setModuleDefault || (Object.create ? (function(o, v) {
     Object.defineProperty(o, "default", { enumerable: true, value: v });
-  } : function(o, v) {
+  }) : function(o, v) {
     o["default"] = v;
   });
   var __importStar = toolrunner && toolrunner.__importStar || function(mod) {
@@ -2553,18 +2553,18 @@ var hasRequiredExec;
 function requireExec() {
   if (hasRequiredExec) return exec;
   hasRequiredExec = 1;
-  var __createBinding = exec && exec.__createBinding || (Object.create ? function(o, m, k, k2) {
+  var __createBinding = exec && exec.__createBinding || (Object.create ? (function(o, m, k, k2) {
     if (k2 === void 0) k2 = k;
     Object.defineProperty(o, k2, { enumerable: true, get: function() {
       return m[k];
     } });
-  } : function(o, m, k, k2) {
+  }) : (function(o, m, k, k2) {
     if (k2 === void 0) k2 = k;
     o[k2] = m[k];
-  });
-  var __setModuleDefault = exec && exec.__setModuleDefault || (Object.create ? function(o, v) {
+  }));
+  var __setModuleDefault = exec && exec.__setModuleDefault || (Object.create ? (function(o, v) {
     Object.defineProperty(o, "default", { enumerable: true, value: v });
-  } : function(o, v) {
+  }) : function(o, v) {
     o["default"] = v;
   });
   var __importStar = exec && exec.__importStar || function(mod) {
@@ -2660,7 +2660,7 @@ function requirePlatform() {
   if (hasRequiredPlatform) return platform;
   hasRequiredPlatform = 1;
   (function(exports2) {
-    var __createBinding = platform && platform.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = platform && platform.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -2669,13 +2669,13 @@ function requirePlatform() {
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = platform && platform.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = platform && platform.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = platform && platform.__importStar || function(mod) {
@@ -2780,7 +2780,7 @@ function requireCore() {
   if (hasRequiredCore) return core;
   hasRequiredCore = 1;
   (function(exports2) {
-    var __createBinding = core && core.__createBinding || (Object.create ? function(o, m, k, k2) {
+    var __createBinding = core && core.__createBinding || (Object.create ? (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       var desc = Object.getOwnPropertyDescriptor(m, k);
       if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -2789,13 +2789,13 @@ function requireCore() {
         } };
       }
       Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
+    }) : (function(o, m, k, k2) {
       if (k2 === void 0) k2 = k;
       o[k2] = m[k];
-    });
-    var __setModuleDefault = core && core.__setModuleDefault || (Object.create ? function(o, v) {
+    }));
+    var __setModuleDefault = core && core.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
+    }) : function(o, v) {
       o["default"] = v;
     });
     var __importStar = core && core.__importStar || function(mod) {

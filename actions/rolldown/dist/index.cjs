@@ -24,10 +24,11 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 }) : target, mod));
 
 //#endregion
-const node_process = __toESM(require("node:process"));
+let node_process = require("node:process");
+node_process = __toESM(node_process);
 
 //#region ../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/utils.js
-var require_utils = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/utils.js"(exports) {
+var require_utils = /* @__PURE__ */ __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/utils.js": ((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.toCommandProperties = exports.toCommandValue = void 0;
 	/**
@@ -58,12 +59,12 @@ var require_utils = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/
 		};
 	}
 	exports.toCommandProperties = toCommandProperties;
-} });
+}) });
 
 //#endregion
 //#region ../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/command.js
-var require_command = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/command.js"(exports) {
-	var __createBinding$9 = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+var require_command = /* @__PURE__ */ __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/command.js": ((exports) => {
+	var __createBinding$9 = exports && exports.__createBinding || (Object.create ? (function(o, m, k, k2) {
 		if (k2 === void 0) k2 = k;
 		var desc = Object.getOwnPropertyDescriptor(m, k);
 		if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) desc = {
@@ -73,16 +74,16 @@ var require_command = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.
 			}
 		};
 		Object.defineProperty(o, k2, desc);
-	} : function(o, m, k, k2) {
+	}) : (function(o, m, k, k2) {
 		if (k2 === void 0) k2 = k;
 		o[k2] = m[k];
-	});
-	var __setModuleDefault$9 = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+	}));
+	var __setModuleDefault$9 = exports && exports.__setModuleDefault || (Object.create ? (function(o, v) {
 		Object.defineProperty(o, "default", {
 			enumerable: true,
 			value: v
 		});
-	} : function(o, v) {
+	}) : function(o, v) {
 		o["default"] = v;
 	});
 	var __importStar$9 = exports && exports.__importStar || function(mod) {
@@ -149,12 +150,12 @@ var require_command = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.
 	function escapeProperty(s) {
 		return (0, utils_1$2.toCommandValue)(s).replace(/%/g, "%25").replace(/\r/g, "%0D").replace(/\n/g, "%0A").replace(/:/g, "%3A").replace(/,/g, "%2C");
 	}
-} });
+}) });
 
 //#endregion
 //#region ../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/file-command.js
-var require_file_command = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/file-command.js"(exports) {
-	var __createBinding$8 = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+var require_file_command = /* @__PURE__ */ __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/file-command.js": ((exports) => {
+	var __createBinding$8 = exports && exports.__createBinding || (Object.create ? (function(o, m, k, k2) {
 		if (k2 === void 0) k2 = k;
 		var desc = Object.getOwnPropertyDescriptor(m, k);
 		if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) desc = {
@@ -164,16 +165,16 @@ var require_file_command = __commonJS({ "../../node_modules/.pnpm/@actions+core@
 			}
 		};
 		Object.defineProperty(o, k2, desc);
-	} : function(o, m, k, k2) {
+	}) : (function(o, m, k, k2) {
 		if (k2 === void 0) k2 = k;
 		o[k2] = m[k];
-	});
-	var __setModuleDefault$8 = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+	}));
+	var __setModuleDefault$8 = exports && exports.__setModuleDefault || (Object.create ? (function(o, v) {
 		Object.defineProperty(o, "default", {
 			enumerable: true,
 			value: v
 		});
-	} : function(o, v) {
+	}) : function(o, v) {
 		o["default"] = v;
 	});
 	var __importStar$8 = exports && exports.__importStar || function(mod) {
@@ -206,16 +207,16 @@ var require_file_command = __commonJS({ "../../node_modules/.pnpm/@actions+core@
 		return `${key}<<${delimiter}${os$2.EOL}${convertedValue}${os$2.EOL}${delimiter}`;
 	}
 	exports.prepareKeyValueMessage = prepareKeyValueMessage;
-} });
+}) });
 
 //#endregion
 //#region ../../node_modules/.pnpm/@actions+http-client@2.1.1/node_modules/@actions/http-client/lib/proxy.js
-var require_proxy = __commonJS({ "../../node_modules/.pnpm/@actions+http-client@2.1.1/node_modules/@actions/http-client/lib/proxy.js"(exports) {
+var require_proxy = /* @__PURE__ */ __commonJS({ "../../node_modules/.pnpm/@actions+http-client@2.1.1/node_modules/@actions/http-client/lib/proxy.js": ((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.checkBypass = exports.getProxyUrl = void 0;
 	function getProxyUrl$1(reqUrl) {
 		const usingSsl = reqUrl.protocol === "https:";
-		if (checkBypass(reqUrl)) return void 0;
+		if (checkBypass(reqUrl)) return;
 		const proxyVar = (() => {
 			if (usingSsl) return process.env["https_proxy"] || process.env["HTTPS_PROXY"];
 			else return process.env["http_proxy"] || process.env["HTTP_PROXY"];
@@ -225,7 +226,7 @@ var require_proxy = __commonJS({ "../../node_modules/.pnpm/@actions+http-client@
 		} catch (_a$1) {
 			if (!proxyVar.startsWith("http://") && !proxyVar.startsWith("https://")) return new URL(`http://${proxyVar}`);
 		}
-		else return void 0;
+		else return;
 	}
 	exports.getProxyUrl = getProxyUrl$1;
 	function checkBypass(reqUrl) {
@@ -248,17 +249,17 @@ var require_proxy = __commonJS({ "../../node_modules/.pnpm/@actions+http-client@
 		const hostLower = host.toLowerCase();
 		return hostLower === "localhost" || hostLower.startsWith("127.") || hostLower.startsWith("[::1]") || hostLower.startsWith("[0:0:0:0:0:0:0:1]");
 	}
-} });
+}) });
 
 //#endregion
 //#region ../../node_modules/.pnpm/tunnel@0.0.6/node_modules/tunnel/lib/tunnel.js
-var require_tunnel$1 = __commonJS({ "../../node_modules/.pnpm/tunnel@0.0.6/node_modules/tunnel/lib/tunnel.js"(exports) {
-	var net = require("net");
+var require_tunnel$1 = /* @__PURE__ */ __commonJS({ "../../node_modules/.pnpm/tunnel@0.0.6/node_modules/tunnel/lib/tunnel.js": ((exports) => {
+	require("net");
 	var tls = require("tls");
 	var http$1 = require("http");
 	var https$1 = require("https");
 	var events$1 = require("events");
-	var assert = require("assert");
+	require("assert");
 	var util = require("util");
 	exports.httpOverHttp = httpOverHttp;
 	exports.httpsOverHttp = httpsOverHttp;
@@ -450,18 +451,18 @@ var require_tunnel$1 = __commonJS({ "../../node_modules/.pnpm/tunnel@0.0.6/node_
 	};
 	else debug$1 = function() {};
 	exports.debug = debug$1;
-} });
+}) });
 
 //#endregion
 //#region ../../node_modules/.pnpm/tunnel@0.0.6/node_modules/tunnel/index.js
-var require_tunnel = __commonJS({ "../../node_modules/.pnpm/tunnel@0.0.6/node_modules/tunnel/index.js"(exports, module) {
+var require_tunnel = /* @__PURE__ */ __commonJS({ "../../node_modules/.pnpm/tunnel@0.0.6/node_modules/tunnel/index.js": ((exports, module) => {
 	module.exports = require_tunnel$1();
-} });
+}) });
 
 //#endregion
 //#region ../../node_modules/.pnpm/@actions+http-client@2.1.1/node_modules/@actions/http-client/lib/index.js
-var require_lib = __commonJS({ "../../node_modules/.pnpm/@actions+http-client@2.1.1/node_modules/@actions/http-client/lib/index.js"(exports) {
-	var __createBinding$7 = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+var require_lib = /* @__PURE__ */ __commonJS({ "../../node_modules/.pnpm/@actions+http-client@2.1.1/node_modules/@actions/http-client/lib/index.js": ((exports) => {
+	var __createBinding$7 = exports && exports.__createBinding || (Object.create ? (function(o, m, k, k2) {
 		if (k2 === void 0) k2 = k;
 		Object.defineProperty(o, k2, {
 			enumerable: true,
@@ -469,16 +470,16 @@ var require_lib = __commonJS({ "../../node_modules/.pnpm/@actions+http-client@2.
 				return m[k];
 			}
 		});
-	} : function(o, m, k, k2) {
+	}) : (function(o, m, k, k2) {
 		if (k2 === void 0) k2 = k;
 		o[k2] = m[k];
-	});
-	var __setModuleDefault$7 = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+	}));
+	var __setModuleDefault$7 = exports && exports.__setModuleDefault || (Object.create ? (function(o, v) {
 		Object.defineProperty(o, "default", {
 			enumerable: true,
 			value: v
 		});
-	} : function(o, v) {
+	}) : function(o, v) {
 		o["default"] = v;
 	});
 	var __importStar$7 = exports && exports.__importStar || function(mod) {
@@ -633,8 +634,7 @@ var require_lib = __commonJS({ "../../node_modules/.pnpm/@actions+http-client@2.
 	};
 	exports.HttpClientResponse = HttpClientResponse;
 	function isHttps(requestUrl) {
-		const parsedUrl = new URL(requestUrl);
-		return parsedUrl.protocol === "https:";
+		return new URL(requestUrl).protocol === "https:";
 	}
 	exports.isHttps = isHttps;
 	var HttpClient = class {
@@ -975,11 +975,11 @@ var require_lib = __commonJS({ "../../node_modules/.pnpm/@actions+http-client@2.
 	};
 	exports.HttpClient = HttpClient;
 	const lowercaseKeys = (obj) => Object.keys(obj).reduce((c, k) => (c[k.toLowerCase()] = obj[k], c), {});
-} });
+}) });
 
 //#endregion
 //#region ../../node_modules/.pnpm/@actions+http-client@2.1.1/node_modules/@actions/http-client/lib/auth.js
-var require_auth = __commonJS({ "../../node_modules/.pnpm/@actions+http-client@2.1.1/node_modules/@actions/http-client/lib/auth.js"(exports) {
+var require_auth = /* @__PURE__ */ __commonJS({ "../../node_modules/.pnpm/@actions+http-client@2.1.1/node_modules/@actions/http-client/lib/auth.js": ((exports) => {
 	var __awaiter$8 = exports && exports.__awaiter || function(thisArg, _arguments, P, generator) {
 		function adopt(value) {
 			return value instanceof P ? value : new P(function(resolve) {
@@ -1064,11 +1064,11 @@ var require_auth = __commonJS({ "../../node_modules/.pnpm/@actions+http-client@2
 		}
 	};
 	exports.PersonalAccessTokenCredentialHandler = PersonalAccessTokenCredentialHandler;
-} });
+}) });
 
 //#endregion
 //#region ../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/oidc-utils.js
-var require_oidc_utils = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/oidc-utils.js"(exports) {
+var require_oidc_utils = /* @__PURE__ */ __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/oidc-utils.js": ((exports) => {
 	var __awaiter$7 = exports && exports.__awaiter || function(thisArg, _arguments, P, generator) {
 		function adopt(value) {
 			return value instanceof P ? value : new P(function(resolve) {
@@ -1122,13 +1122,11 @@ var require_oidc_utils = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.
 		static getCall(id_token_url) {
 			var _a$1;
 			return __awaiter$7(this, void 0, void 0, function* () {
-				const httpclient = OidcClient.createHttpClient();
-				const res = yield httpclient.getJson(id_token_url).catch((error$1) => {
+				const id_token = (_a$1 = (yield OidcClient.createHttpClient().getJson(id_token_url).catch((error$1) => {
 					throw new Error(`Failed to get ID Token. \n 
         Error Code : ${error$1.statusCode}\n 
         Error Message: ${error$1.message}`);
-				});
-				const id_token = (_a$1 = res.result) === null || _a$1 === void 0 ? void 0 : _a$1.value;
+				})).result) === null || _a$1 === void 0 ? void 0 : _a$1.value;
 				if (!id_token) throw new Error("Response json body do not have ID Token field");
 				return id_token;
 			});
@@ -1137,10 +1135,7 @@ var require_oidc_utils = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.
 			return __awaiter$7(this, void 0, void 0, function* () {
 				try {
 					let id_token_url = OidcClient.getIDTokenUrl();
-					if (audience) {
-						const encodedAudience = encodeURIComponent(audience);
-						id_token_url = `${id_token_url}&audience=${encodedAudience}`;
-					}
+					if (audience) id_token_url = `${id_token_url}&audience=${encodeURIComponent(audience)}`;
 					(0, core_1.debug)(`ID token url is ${id_token_url}`);
 					const id_token = yield OidcClient.getCall(id_token_url);
 					(0, core_1.setSecret)(id_token);
@@ -1152,11 +1147,11 @@ var require_oidc_utils = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.
 		}
 	};
 	exports.OidcClient = OidcClient;
-} });
+}) });
 
 //#endregion
 //#region ../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/summary.js
-var require_summary = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/summary.js"(exports) {
+var require_summary = /* @__PURE__ */ __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/summary.js": ((exports) => {
 	var __awaiter$6 = exports && exports.__awaiter || function(thisArg, _arguments, P, generator) {
 		function adopt(value) {
 			return value instanceof P ? value : new P(function(resolve) {
@@ -1240,8 +1235,7 @@ var require_summary = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.
 			return __awaiter$6(this, void 0, void 0, function* () {
 				const overwrite = !!(options === null || options === void 0 ? void 0 : options.overwrite);
 				const filePath = yield this.filePath();
-				const writeFunc = overwrite ? writeFile : appendFile;
-				yield writeFunc(filePath, this._buffer, { encoding: "utf8" });
+				yield (overwrite ? writeFile : appendFile)(filePath, this._buffer, { encoding: "utf8" });
 				return this.emptyBuffer();
 			});
 		}
@@ -1449,12 +1443,12 @@ var require_summary = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.
 	*/
 	exports.markdownSummary = _summary;
 	exports.summary = _summary;
-} });
+}) });
 
 //#endregion
 //#region ../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/path-utils.js
-var require_path_utils = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/path-utils.js"(exports) {
-	var __createBinding$6 = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+var require_path_utils = /* @__PURE__ */ __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/path-utils.js": ((exports) => {
+	var __createBinding$6 = exports && exports.__createBinding || (Object.create ? (function(o, m, k, k2) {
 		if (k2 === void 0) k2 = k;
 		var desc = Object.getOwnPropertyDescriptor(m, k);
 		if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) desc = {
@@ -1464,16 +1458,16 @@ var require_path_utils = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.
 			}
 		};
 		Object.defineProperty(o, k2, desc);
-	} : function(o, m, k, k2) {
+	}) : (function(o, m, k, k2) {
 		if (k2 === void 0) k2 = k;
 		o[k2] = m[k];
-	});
-	var __setModuleDefault$6 = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+	}));
+	var __setModuleDefault$6 = exports && exports.__setModuleDefault || (Object.create ? (function(o, v) {
 		Object.defineProperty(o, "default", {
 			enumerable: true,
 			value: v
 		});
-	} : function(o, v) {
+	}) : function(o, v) {
 		o["default"] = v;
 	});
 	var __importStar$6 = exports && exports.__importStar || function(mod) {
@@ -1522,12 +1516,12 @@ var require_path_utils = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.
 		return pth.replace(/[/\\]/g, path$4.sep);
 	}
 	exports.toPlatformPath = toPlatformPath;
-} });
+}) });
 
 //#endregion
 //#region ../../node_modules/.pnpm/@actions+io@1.1.3/node_modules/@actions/io/lib/io-util.js
-var require_io_util = __commonJS({ "../../node_modules/.pnpm/@actions+io@1.1.3/node_modules/@actions/io/lib/io-util.js"(exports) {
-	var __createBinding$5 = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+var require_io_util = /* @__PURE__ */ __commonJS({ "../../node_modules/.pnpm/@actions+io@1.1.3/node_modules/@actions/io/lib/io-util.js": ((exports) => {
+	var __createBinding$5 = exports && exports.__createBinding || (Object.create ? (function(o, m, k, k2) {
 		if (k2 === void 0) k2 = k;
 		Object.defineProperty(o, k2, {
 			enumerable: true,
@@ -1535,16 +1529,16 @@ var require_io_util = __commonJS({ "../../node_modules/.pnpm/@actions+io@1.1.3/n
 				return m[k];
 			}
 		});
-	} : function(o, m, k, k2) {
+	}) : (function(o, m, k, k2) {
 		if (k2 === void 0) k2 = k;
 		o[k2] = m[k];
-	});
-	var __setModuleDefault$5 = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+	}));
+	var __setModuleDefault$5 = exports && exports.__setModuleDefault || (Object.create ? (function(o, v) {
 		Object.defineProperty(o, "default", {
 			enumerable: true,
 			value: v
 		});
-	} : function(o, v) {
+	}) : function(o, v) {
 		o["default"] = v;
 	});
 	var __importStar$5 = exports && exports.__importStar || function(mod) {
@@ -1606,8 +1600,7 @@ var require_io_util = __commonJS({ "../../node_modules/.pnpm/@actions+io@1.1.3/n
 	exports.exists = exists;
 	function isDirectory(fsPath, useStat = false) {
 		return __awaiter$5(this, void 0, void 0, function* () {
-			const stats = useStat ? yield exports.stat(fsPath) : yield exports.lstat(fsPath);
-			return stats.isDirectory();
+			return (useStat ? yield exports.stat(fsPath) : yield exports.lstat(fsPath)).isDirectory();
 		});
 	}
 	exports.isDirectory = isDirectory;
@@ -1687,12 +1680,12 @@ var require_io_util = __commonJS({ "../../node_modules/.pnpm/@actions+io@1.1.3/n
 		return (_a$1 = process.env["COMSPEC"]) !== null && _a$1 !== void 0 ? _a$1 : `cmd.exe`;
 	}
 	exports.getCmdPath = getCmdPath;
-} });
+}) });
 
 //#endregion
 //#region ../../node_modules/.pnpm/@actions+io@1.1.3/node_modules/@actions/io/lib/io.js
-var require_io = __commonJS({ "../../node_modules/.pnpm/@actions+io@1.1.3/node_modules/@actions/io/lib/io.js"(exports) {
-	var __createBinding$4 = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+var require_io = /* @__PURE__ */ __commonJS({ "../../node_modules/.pnpm/@actions+io@1.1.3/node_modules/@actions/io/lib/io.js": ((exports) => {
+	var __createBinding$4 = exports && exports.__createBinding || (Object.create ? (function(o, m, k, k2) {
 		if (k2 === void 0) k2 = k;
 		Object.defineProperty(o, k2, {
 			enumerable: true,
@@ -1700,16 +1693,16 @@ var require_io = __commonJS({ "../../node_modules/.pnpm/@actions+io@1.1.3/node_m
 				return m[k];
 			}
 		});
-	} : function(o, m, k, k2) {
+	}) : (function(o, m, k, k2) {
 		if (k2 === void 0) k2 = k;
 		o[k2] = m[k];
-	});
-	var __setModuleDefault$4 = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+	}));
+	var __setModuleDefault$4 = exports && exports.__setModuleDefault || (Object.create ? (function(o, v) {
 		Object.defineProperty(o, "default", {
 			enumerable: true,
 			value: v
 		});
-	} : function(o, v) {
+	}) : function(o, v) {
 		o["default"] = v;
 	});
 	var __importStar$4 = exports && exports.__importStar || function(mod) {
@@ -1768,8 +1761,7 @@ var require_io = __commonJS({ "../../node_modules/.pnpm/@actions+io@1.1.3/node_m
 			if (destStat && destStat.isFile() && !force) return;
 			const newDest = destStat && destStat.isDirectory() && copySourceDirectory ? path$2.join(dest, path$2.basename(source)) : dest;
 			if (!(yield ioUtil$1.exists(source))) throw new Error(`no such file or directory: ${source}`);
-			const sourceStat = yield ioUtil$1.stat(source);
-			if (sourceStat.isDirectory()) if (!recursive) throw new Error(`Failed to copy. ${source} is a directory, but tried to copy without recursive flag.`);
+			if ((yield ioUtil$1.stat(source)).isDirectory()) if (!recursive) throw new Error(`Failed to copy. ${source} is a directory, but tried to copy without recursive flag.`);
 			else yield cpDirRecursive(source, newDest, 0, force);
 			else {
 				if (path$2.relative(source, newDest) === "") throw new Error(`'${newDest}' and '${source}' are the same file`);
@@ -1911,8 +1903,7 @@ var require_io = __commonJS({ "../../node_modules/.pnpm/@actions+io@1.1.3/node_m
 			for (const fileName of files) {
 				const srcFile = `${sourceDir}/${fileName}`;
 				const destFile = `${destDir}/${fileName}`;
-				const srcFileStat = yield ioUtil$1.lstat(srcFile);
-				if (srcFileStat.isDirectory()) yield cpDirRecursive(srcFile, destFile, currentDepth, force);
+				if ((yield ioUtil$1.lstat(srcFile)).isDirectory()) yield cpDirRecursive(srcFile, destFile, currentDepth, force);
 				else yield copyFile(srcFile, destFile, force);
 			}
 			yield ioUtil$1.chmod(destDir, (yield ioUtil$1.stat(sourceDir)).mode);
@@ -1935,12 +1926,12 @@ var require_io = __commonJS({ "../../node_modules/.pnpm/@actions+io@1.1.3/node_m
 			} else if (!(yield ioUtil$1.exists(destFile)) || force) yield ioUtil$1.copyFile(srcFile, destFile);
 		});
 	}
-} });
+}) });
 
 //#endregion
 //#region ../../node_modules/.pnpm/@actions+exec@1.1.1/node_modules/@actions/exec/lib/toolrunner.js
-var require_toolrunner = __commonJS({ "../../node_modules/.pnpm/@actions+exec@1.1.1/node_modules/@actions/exec/lib/toolrunner.js"(exports) {
-	var __createBinding$3 = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+var require_toolrunner = /* @__PURE__ */ __commonJS({ "../../node_modules/.pnpm/@actions+exec@1.1.1/node_modules/@actions/exec/lib/toolrunner.js": ((exports) => {
+	var __createBinding$3 = exports && exports.__createBinding || (Object.create ? (function(o, m, k, k2) {
 		if (k2 === void 0) k2 = k;
 		Object.defineProperty(o, k2, {
 			enumerable: true,
@@ -1948,16 +1939,16 @@ var require_toolrunner = __commonJS({ "../../node_modules/.pnpm/@actions+exec@1.
 				return m[k];
 			}
 		});
-	} : function(o, m, k, k2) {
+	}) : (function(o, m, k, k2) {
 		if (k2 === void 0) k2 = k;
 		o[k2] = m[k];
-	});
-	var __setModuleDefault$3 = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+	}));
+	var __setModuleDefault$3 = exports && exports.__setModuleDefault || (Object.create ? (function(o, v) {
 		Object.defineProperty(o, "default", {
 			enumerable: true,
 			value: v
 		});
-	} : function(o, v) {
+	}) : function(o, v) {
 		o["default"] = v;
 	});
 	var __importStar$3 = exports && exports.__importStar || function(mod) {
@@ -2205,10 +2196,7 @@ var require_toolrunner = __commonJS({ "../../node_modules/.pnpm/@actions+exec@1.
 					if (cp$1.stderr) cp$1.stderr.on("data", (data) => {
 						state.processStderr = true;
 						if (this.options.listeners && this.options.listeners.stderr) this.options.listeners.stderr(data);
-						if (!optionsNonNull.silent && optionsNonNull.errStream && optionsNonNull.outStream) {
-							const s = optionsNonNull.failOnStdErr ? optionsNonNull.errStream : optionsNonNull.outStream;
-							s.write(data);
-						}
+						if (!optionsNonNull.silent && optionsNonNull.errStream && optionsNonNull.outStream) (optionsNonNull.failOnStdErr ? optionsNonNull.errStream : optionsNonNull.outStream).write(data);
 						errbuffer = this._processLineBuffer(data, errbuffer, (line) => {
 							if (this.options.listeners && this.options.listeners.errline) this.options.listeners.errline(line);
 						});
@@ -2339,12 +2327,12 @@ var require_toolrunner = __commonJS({ "../../node_modules/.pnpm/@actions+exec@1.
 			state._setResult();
 		}
 	};
-} });
+}) });
 
 //#endregion
 //#region ../../node_modules/.pnpm/@actions+exec@1.1.1/node_modules/@actions/exec/lib/exec.js
-var require_exec = __commonJS({ "../../node_modules/.pnpm/@actions+exec@1.1.1/node_modules/@actions/exec/lib/exec.js"(exports) {
-	var __createBinding$2 = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+var require_exec = /* @__PURE__ */ __commonJS({ "../../node_modules/.pnpm/@actions+exec@1.1.1/node_modules/@actions/exec/lib/exec.js": ((exports) => {
+	var __createBinding$2 = exports && exports.__createBinding || (Object.create ? (function(o, m, k, k2) {
 		if (k2 === void 0) k2 = k;
 		Object.defineProperty(o, k2, {
 			enumerable: true,
@@ -2352,16 +2340,16 @@ var require_exec = __commonJS({ "../../node_modules/.pnpm/@actions+exec@1.1.1/no
 				return m[k];
 			}
 		});
-	} : function(o, m, k, k2) {
+	}) : (function(o, m, k, k2) {
 		if (k2 === void 0) k2 = k;
 		o[k2] = m[k];
-	});
-	var __setModuleDefault$2 = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+	}));
+	var __setModuleDefault$2 = exports && exports.__setModuleDefault || (Object.create ? (function(o, v) {
 		Object.defineProperty(o, "default", {
 			enumerable: true,
 			value: v
 		});
-	} : function(o, v) {
+	}) : function(o, v) {
 		o["default"] = v;
 	});
 	var __importStar$2 = exports && exports.__importStar || function(mod) {
@@ -2420,8 +2408,7 @@ var require_exec = __commonJS({ "../../node_modules/.pnpm/@actions+exec@1.1.1/no
 			if (commandArgs.length === 0) throw new Error(`Parameter 'commandLine' cannot be null or empty.`);
 			const toolPath = commandArgs[0];
 			args = commandArgs.slice(1).concat(args || []);
-			const runner = new tr.ToolRunner(toolPath, args, options);
-			return runner.exec();
+			return new tr.ToolRunner(toolPath, args, options).exec();
 		});
 	}
 	exports.exec = exec$1;
@@ -2467,12 +2454,12 @@ var require_exec = __commonJS({ "../../node_modules/.pnpm/@actions+exec@1.1.1/no
 		});
 	}
 	exports.getExecOutput = getExecOutput;
-} });
+}) });
 
 //#endregion
 //#region ../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/platform.js
-var require_platform = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/platform.js"(exports) {
-	var __createBinding$1 = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+var require_platform = /* @__PURE__ */ __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/platform.js": ((exports) => {
+	var __createBinding$1 = exports && exports.__createBinding || (Object.create ? (function(o, m, k, k2) {
 		if (k2 === void 0) k2 = k;
 		var desc = Object.getOwnPropertyDescriptor(m, k);
 		if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) desc = {
@@ -2482,16 +2469,16 @@ var require_platform = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11
 			}
 		};
 		Object.defineProperty(o, k2, desc);
-	} : function(o, m, k, k2) {
+	}) : (function(o, m, k, k2) {
 		if (k2 === void 0) k2 = k;
 		o[k2] = m[k];
-	});
-	var __setModuleDefault$1 = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+	}));
+	var __setModuleDefault$1 = exports && exports.__setModuleDefault || (Object.create ? (function(o, v) {
 		Object.defineProperty(o, "default", {
 			enumerable: true,
 			value: v
 		});
-	} : function(o, v) {
+	}) : function(o, v) {
 		o["default"] = v;
 	});
 	var __importStar$1 = exports && exports.__importStar || function(mod) {
@@ -2549,9 +2536,8 @@ var require_platform = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11
 		var _a$1, _b, _c, _d;
 		const { stdout } = yield exec.getExecOutput("sw_vers", void 0, { silent: true });
 		const version = (_b = (_a$1 = stdout.match(/ProductVersion:\s*(.+)/)) === null || _a$1 === void 0 ? void 0 : _a$1[1]) !== null && _b !== void 0 ? _b : "";
-		const name = (_d = (_c = stdout.match(/ProductName:\s*(.+)/)) === null || _c === void 0 ? void 0 : _c[1]) !== null && _d !== void 0 ? _d : "";
 		return {
-			name,
+			name: (_d = (_c = stdout.match(/ProductName:\s*(.+)/)) === null || _c === void 0 ? void 0 : _c[1]) !== null && _d !== void 0 ? _d : "",
 			version
 		};
 	});
@@ -2584,12 +2570,12 @@ var require_platform = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11
 		});
 	}
 	exports.getDetails = getDetails;
-} });
+}) });
 
 //#endregion
 //#region ../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/core.js
-var require_core = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/core.js"(exports) {
-	var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+var require_core = /* @__PURE__ */ __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/node_modules/@actions/core/lib/core.js": ((exports) => {
+	var __createBinding = exports && exports.__createBinding || (Object.create ? (function(o, m, k, k2) {
 		if (k2 === void 0) k2 = k;
 		var desc = Object.getOwnPropertyDescriptor(m, k);
 		if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) desc = {
@@ -2599,16 +2585,16 @@ var require_core = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/n
 			}
 		};
 		Object.defineProperty(o, k2, desc);
-	} : function(o, m, k, k2) {
+	}) : (function(o, m, k, k2) {
 		if (k2 === void 0) k2 = k;
 		o[k2] = m[k];
-	});
-	var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+	}));
+	var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? (function(o, v) {
 		Object.defineProperty(o, "default", {
 			enumerable: true,
 			value: v
 		});
-	} : function(o, v) {
+	}) : function(o, v) {
 		o["default"] = v;
 	});
 	var __importStar = exports && exports.__importStar || function(mod) {
@@ -2677,8 +2663,7 @@ var require_core = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/n
 	function exportVariable(name, val) {
 		const convertedVal = (0, utils_1.toCommandValue)(val);
 		process.env[name] = convertedVal;
-		const filePath = process.env["GITHUB_ENV"] || "";
-		if (filePath) return (0, file_command_1.issueFileCommand)("ENV", (0, file_command_1.prepareKeyValueMessage)(name, val));
+		if (process.env["GITHUB_ENV"] || "") return (0, file_command_1.issueFileCommand)("ENV", (0, file_command_1.prepareKeyValueMessage)(name, val));
 		(0, command_1.issueCommand)("set-env", { name }, convertedVal);
 	}
 	exports.exportVariable = exportVariable;
@@ -2695,8 +2680,7 @@ var require_core = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/n
 	* @param inputPath
 	*/
 	function addPath(inputPath) {
-		const filePath = process.env["GITHUB_PATH"] || "";
-		if (filePath) (0, file_command_1.issueFileCommand)("PATH", inputPath);
+		if (process.env["GITHUB_PATH"] || "") (0, file_command_1.issueFileCommand)("PATH", inputPath);
 		else (0, command_1.issueCommand)("add-path", {}, inputPath);
 		process.env["PATH"] = `${inputPath}${path.delimiter}${process.env["PATH"]}`;
 	}
@@ -2765,8 +2749,7 @@ var require_core = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/n
 	* @param     value    value to store. Non-string values will be converted to a string via JSON.stringify
 	*/
 	function setOutput(name, value) {
-		const filePath = process.env["GITHUB_OUTPUT"] || "";
-		if (filePath) return (0, file_command_1.issueFileCommand)("OUTPUT", (0, file_command_1.prepareKeyValueMessage)(name, value));
+		if (process.env["GITHUB_OUTPUT"] || "") return (0, file_command_1.issueFileCommand)("OUTPUT", (0, file_command_1.prepareKeyValueMessage)(name, value));
 		process.stdout.write(os.EOL);
 		(0, command_1.issueCommand)("set-output", { name }, (0, utils_1.toCommandValue)(value));
 	}
@@ -2886,8 +2869,7 @@ var require_core = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/n
 	* @param     value    value to store. Non-string values will be converted to a string via JSON.stringify
 	*/
 	function saveState(name, value) {
-		const filePath = process.env["GITHUB_STATE"] || "";
-		if (filePath) return (0, file_command_1.issueFileCommand)("STATE", (0, file_command_1.prepareKeyValueMessage)(name, value));
+		if (process.env["GITHUB_STATE"] || "") return (0, file_command_1.issueFileCommand)("STATE", (0, file_command_1.prepareKeyValueMessage)(name, value));
 		(0, command_1.issueCommand)("save-state", { name }, (0, utils_1.toCommandValue)(value));
 	}
 	exports.saveState = saveState;
@@ -2953,11 +2935,11 @@ var require_core = __commonJS({ "../../node_modules/.pnpm/@actions+core@1.11.1/n
 	* Platform utilities exports
 	*/
 	exports.platform = __importStar(require_platform());
-} });
+}) });
 
 //#endregion
 //#region src/index.ts
-var import_core = __toESM(require_core(), 1);
+var import_core = /* @__PURE__ */ __toESM(require_core(), 1);
 async function run() {
 	try {
 		const data = await fetch("https://jsonplaceholder.typicode.com/todos/1").then((res) => res.json());
