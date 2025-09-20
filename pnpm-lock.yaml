@@ -7,14 +7,14 @@ settings:
 catalogs:
   bunchee-bundler:
     bunchee:
-      specifier: ^6.6.0
+      specifier: 6.6.0
       version: 6.6.0
   dev:
     '@luxass/eslint-config':
-      specifier: ^5.3.1
+      specifier: 5.3.1
       version: 5.3.1
     '@types/node':
-      specifier: ^22.18.3
+      specifier: 22.18.6
       version: 22.18.6
     eslint:
       specifier: ^9.35.0
@@ -23,56 +23,56 @@ catalogs:
       specifier: ^1.0.1
       version: 1.0.1
     turbo:
-      specifier: ^2.5.6
+      specifier: 2.5.6
       version: 2.5.6
     typescript:
-      specifier: ^5.9.2
+      specifier: 5.9.2
       version: 5.9.2
   esbuild-bundler:
     esbuild:
-      specifier: ^0.25.9
+      specifier: 0.25.9
       version: 0.25.9
   ncc-bundler:
     '@vercel/ncc':
-      specifier: ^0.38.3
+      specifier: 0.38.3
       version: 0.38.3
   prod:
     '@actions/core':
-      specifier: ^1.11.1
+      specifier: 1.11.1
       version: 1.11.1
   rolldown-bundler:
     rolldown:
-      specifier: ^1.0.0-beta
+      specifier: 1.0.0-beta.36
       version: 1.0.0-beta.36
   rollup-bundler:
     '@rollup/plugin-commonjs':
-      specifier: ^28.0.6
+      specifier: 28.0.6
       version: 28.0.6
     '@rollup/plugin-json':
-      specifier: ^6.1.0
+      specifier: 6.1.0
       version: 6.1.0
     '@rollup/plugin-node-resolve':
-      specifier: ^16.0.1
+      specifier: 16.0.1
       version: 16.0.1
     '@rollup/plugin-typescript':
-      specifier: ^12.1.4
+      specifier: 12.1.4
       version: 12.1.4
     rollup:
-      specifier: ^4.50.1
+      specifier: 4.50.1
       version: 4.50.1
     tslib:
-      specifier: ^2.8.1
+      specifier: 2.8.1
       version: 2.8.1
   rspack-bundler:
     '@rspack/cli':
-      specifier: ^1.5.3
+      specifier: 1.5.3
       version: 1.5.3
     '@rspack/core':
-      specifier: ^1.5.3
+      specifier: 1.5.3
       version: 1.5.3
   tsup-bundler:
     tsup:
-      specifier: ^8.5.0
+      specifier: 8.5.0
       version: 8.5.0
   vite-bundler:
     vite:
@@ -80,13 +80,13 @@ catalogs:
       version: 7.0.7
   webpack-bundler:
     ts-loader:
-      specifier: ^9.5.4
+      specifier: 9.5.4
       version: 9.5.4
     webpack:
-      specifier: ^5.101.3
+      specifier: 5.101.3
       version: 5.101.3
     webpack-cli:
-      specifier: ^6.0.1
+      specifier: 6.0.1
       version: 6.0.1
 
 importers:
