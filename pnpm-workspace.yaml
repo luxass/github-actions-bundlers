@@ -51,7 +51,7 @@ catalogs:
 
   # vite specific dependencies
   vite-bundler:
-    vite: 7.0.7
+    vite: 7.0.8
 
   # webpack specific dependencies
   webpack-bundler:
