@@ -76,8 +76,8 @@ catalogs:
       version: 8.5.0
   vite-bundler:
     vite:
-      specifier: 7.0.7
-      version: 7.0.7
+      specifier: 7.0.8
+      version: 7.0.8
   webpack-bundler:
     ts-loader:
       specifier: 9.5.4
@@ -325,7 +325,7 @@ importers:
         version: 5.9.2
       vite:
         specifier: catalog:vite-bundler
-        version: 7.0.7(@types/node@22.18.6)(terser@5.39.0)(yaml@2.8.1)
+        version: 7.0.8(@types/node@22.18.6)(terser@5.39.0)(yaml@2.8.1)
 
   actions/webpack:
     dependencies:
@@ -3934,8 +3934,8 @@ packages:
       terser:
         optional: true
 
-  vite@7.0.7:
-    resolution: {integrity: sha512-hc6LujN/EkJHmxeiDJMs0qBontZ1cdBvvoCbWhVjzUFTU329VRyOC46gHNSA8NcOC5yzCeXpwI40tieI3DEZqg==}
+  vite@7.0.8:
+    resolution: {integrity: sha512-cJBdq0/u+8rgstg9t7UkBilf8ipLmeXJO30NxD5HAHOivnj10ocV8YtR/XBvd2wQpN3TmcaxNKaHX3tN7o5F5A==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -7880,7 +7880,7 @@ snapshots:
       terser: 5.39.0
     optional: true
 
-  vite@7.0.7(@types/node@22.18.6)(terser@5.39.0)(yaml@2.8.1):
+  vite@7.0.8(@types/node@22.18.6)(terser@5.39.0)(yaml@2.8.1):
     dependencies:
       esbuild: 0.25.9
       fdir: 6.5.0(picomatch@4.0.3)
