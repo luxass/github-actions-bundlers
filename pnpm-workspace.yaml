@@ -62,3 +62,6 @@ catalogs:
 onlyBuiltDependencies:
   - "@swc/core"
   - esbuild
+
+overrides:
+  rolldown: catalog:rolldown-bundler
