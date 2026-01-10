@@ -4,20 +4,20 @@ packages:
 catalogs:
   # bunchee specific dependencies
   bunchee-bundler:
-    bunchee: 6.6.2
+    bunchee: 6.9.3
 
   # general dev dependencies
   dev:
-    "@luxass/eslint-config": 6.0.1
+    "@luxass/eslint-config": 6.0.3
     "@types/node": 22.18.6
-    eslint: 9.38.0
-    eslint-plugin-format: 1.0.2
-    turbo: 2.5.8
+    eslint: 9.39.2
+    eslint-plugin-format: 1.2.0
+    turbo: 2.7.3
     typescript: 5.9.3
 
   # esbuild specific dependencies
   esbuild-bundler:
-    esbuild: 0.25.11
+    esbuild: 0.27.2
 
   # ncc specific dependencies
   ncc-bundler:
@@ -25,38 +25,38 @@ catalogs:
 
   # prod dependencies
   prod:
-    "@actions/core": 1.11.1
+    "@actions/core": 2.0.2
 
   # rolldown specific dependencies
   rolldown-bundler:
-    rolldown: 1.0.0-beta.45
+    rolldown: 1.0.0-beta.59
 
   # rollup specific dependencies
   rollup-bundler:
-    "@rollup/plugin-commonjs": 28.0.9
+    "@rollup/plugin-commonjs": 29.0.0
     "@rollup/plugin-json": 6.1.0
     "@rollup/plugin-node-resolve": 16.0.3
     "@rollup/plugin-typescript": 12.3.0
-    rollup: 4.52.5
+    rollup: 4.55.1
     tslib: 2.8.1
 
   # rspack specific dependencies
   rspack-bundler:
-    "@rspack/cli": 1.5.8
-    "@rspack/core": 1.5.8
+    "@rspack/cli": 1.7.1
+    "@rspack/core": 1.7.1
 
   # tsup specific dependencies
   tsup-bundler:
-    tsup: 8.5.0
+    tsup: 8.5.1
 
   # vite specific dependencies
   vite-bundler:
-    vite: 7.1.12
+    vite: 7.3.1
 
   # webpack specific dependencies
   webpack-bundler:
     ts-loader: 9.5.4
-    webpack: 5.102.1
+    webpack: 5.104.1
     webpack-cli: 6.0.1
 
 onlyBuiltDependencies:
