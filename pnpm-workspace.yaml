@@ -25,7 +25,7 @@ catalogs:
 
   # prod dependencies
   prod:
-    "@actions/core": 2.0.2
+    "@actions/core": 3.0.0
 
   # rolldown specific dependencies
   rolldown-bundler:
