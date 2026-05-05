@@ -42,8 +42,8 @@ catalogs:
 
   # rspack specific dependencies
   rspack-bundler:
-    "@rspack/cli": 1.7.8
-    "@rspack/core": 1.7.8
+    "@rspack/cli": 2.0.1
+    "@rspack/core": 2.0.1
 
   # tsup specific dependencies
   tsup-bundler:
