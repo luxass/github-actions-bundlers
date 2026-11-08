@@ -11,46 +11,46 @@ packages:
 catalogs:
   # bunchee specific dependencies
   bunchee-bundler:
-    bunchee: 6.9.4
+    bunchee: 7.0.2
 
   # general dev dependencies
   dev:
-    "@types/node": 22.18.6
+    "@types/node": 26.6.6
     oxfmt: 0.75.0
     oxlint: 1.90.0
     oxlint-tsgolint: 7.0.2005
-    turbo: 2.8.17
-    typescript: 5.9.3
+    turbo: 2.11.10
+    typescript: 6.0.3
 
   # esbuild specific dependencies
   esbuild-bundler:
-    esbuild: 0.27.4
+    esbuild: 0.28.2
 
   # ncc specific dependencies
   ncc-bundler:
-    "@vercel/ncc": 0.38.4
+    "@vercel/ncc": 0.45.0
 
   # prod dependencies
   prod:
-    "@actions/core": 3.0.0
+    "@actions/core": 3.0.1
 
   # rolldown specific dependencies
   rolldown-bundler:
-    rolldown: 1.0.0-rc.9
+    rolldown: 1.2.16
 
   # rollup specific dependencies
   rollup-bundler:
-    "@rollup/plugin-commonjs": 29.0.2
+    "@rollup/plugin-commonjs": 29.0.3
     "@rollup/plugin-json": 6.1.0
     "@rollup/plugin-node-resolve": 16.0.3
-    "@rollup/plugin-typescript": 12.3.0
-    rollup: 4.59.0
-    tslib: 2.8.1
+    "@rollup/plugin-typescript": 12.3.1
+    rollup: 4.67.4
+    tslib: 2.9.1
 
   # rspack specific dependencies
   rspack-bundler:
-    "@rspack/cli": 1.7.8
-    "@rspack/core": 1.7.8
+    "@rspack/cli": 2.3.0
+    "@rspack/core": 2.3.0
 
   # tsup specific dependencies
   tsup-bundler:
@@ -58,13 +58,13 @@ catalogs:
 
   # vite specific dependencies
   vite-bundler:
-    vite: 8.0.0
+    vite: 8.3.5
 
   # webpack specific dependencies
   webpack-bundler:
-    ts-loader: 9.5.4
-    webpack: 5.105.4
-    webpack-cli: 7.0.0
+    ts-loader: 9.6.2
+    webpack: 5.112.2
+    webpack-cli: 7.3.1
 
 allowBuilds:
   "@swc/core": true
@@ -73,4 +73,3 @@ allowBuilds:
 overrides:
   rolldown: catalog:rolldown-bundler
   chokidar: 5.0.0
-  undici-types: 6.29.1
