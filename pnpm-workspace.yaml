@@ -15,7 +15,7 @@ catalogs:
 
   # general dev dependencies
   dev:
-    "@types/node": 22.18.6
+    "@types/node": 26.6.6
     oxfmt: 0.75.0
     oxlint: 1.90.0
     oxlint-tsgolint: 7.0.2005
@@ -73,4 +73,3 @@ allowBuilds:
 overrides:
   rolldown: catalog:rolldown-bundler
   chokidar: 5.0.0
-  undici-types: 6.29.1
