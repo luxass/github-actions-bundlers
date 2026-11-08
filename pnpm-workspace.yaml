@@ -63,7 +63,7 @@ catalogs:
   # webpack specific dependencies
   webpack-bundler:
     ts-loader: 9.5.4
-    webpack: 5.105.4
+    webpack: 5.112.2
     webpack-cli: 7.0.0
 
 allowBuilds:
