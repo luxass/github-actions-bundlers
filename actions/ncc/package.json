@@ -2,13 +2,12 @@
   "name": "@github-actions-bundlers/hello-world-action-ncc",
   "version": "0.0.0",
   "description": "A hello world github action using @vercel/ncc",
+  "license": "MIT",
   "author": {
     "name": "Lucas Nørgård",
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@10.34.5",
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/luxass/github-actions-bundlers.git",
@@ -18,18 +17,15 @@
   "scripts": {
     "build": "ncc build src/index.ts",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint .",
     "clean": "git clean -xdf node_modules .turbo dist"
   },
   "dependencies": {
     "@actions/core": "catalog:prod"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "catalog:dev",
     "@types/node": "catalog:dev",
     "@vercel/ncc": "catalog:ncc-bundler",
-    "eslint": "catalog:dev",
-    "eslint-plugin-format": "catalog:dev",
     "typescript": "catalog:dev"
-  }
+  },
+  "packageManager": "pnpm@12.17.0"
 }

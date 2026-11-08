@@ -1,5 +1,6 @@
 // @ts-check
 import { builtinModules } from "node:module";
+
 import commonjs from "@rollup/plugin-commonjs";
 import json from "@rollup/plugin-json";
 import resolve from "@rollup/plugin-node-resolve";
@@ -25,8 +26,5 @@ export default {
     commonjs(),
     json(),
   ],
-  external: [
-    ...builtinModules,
-    ...builtinModules.map((module) => `node:${module}`),
-  ],
+  external: [...builtinModules, ...builtinModules.map((module) => `node:${module}`)],
 };

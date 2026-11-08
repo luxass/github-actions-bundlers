@@ -2,9 +2,7 @@
   "$schema": "https://turbo.build/schema.json",
   "tasks": {
     "topo": {
-      "dependsOn": [
-        "^topo"
-      ]
+      "dependsOn": ["^topo"]
     },
     "build": {
       "outputs": [
@@ -15,9 +13,7 @@
         "!.next/cache/**",
         ".vercel/**"
       ],
-      "dependsOn": [
-        "^build"
-      ]
+      "dependsOn": ["^build"]
     },
     "clean": {
       "cache": false
@@ -26,37 +22,17 @@
       "cache": false,
       "persistent": true
     },
-    "lint": {
-      "dependsOn": [
-        "^topo",
-        "^build"
-      ],
-      "outputs": [
-        "node_modules/.cache/.eslintcache"
-      ]
-    },
     "test": {
       "outputs": [],
-      "dependsOn": [
-        "build"
-      ]
+      "dependsOn": ["build"]
     },
     "test:watch": {
       "cache": false
     },
     "typecheck": {
-      "dependsOn": [
-        "^topo",
-        "^build"
-      ],
-      "outputs": [
-        "node_modules/.cache/tsbuildinfo.json"
-      ]
+      "dependsOn": ["^topo", "^build"],
+      "outputs": ["node_modules/.cache/tsbuildinfo.json"]
     }
   },
-  "globalPassThroughEnv": [
-    "NODE_ENV",
-    "CI",
-    "npm_lifecycle_event"
-  ]
+  "globalPassThroughEnv": ["NODE_ENV", "CI", "npm_lifecycle_event"]
 }

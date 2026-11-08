@@ -2,35 +2,31 @@
   "name": "@github-actions-bundlers/hello-world-action-esbuild",
   "version": "0.0.0",
   "description": "A hello world github action built using esbuild",
-  "type": "module",
+  "license": "MIT",
   "author": {
     "name": "Lucas Nørgård",
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@10.34.5",
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/luxass/github-actions-bundlers.git",
     "directory": "actions/esbuild"
   },
+  "type": "module",
   "main": "dist/index.cjs",
   "scripts": {
     "build": "esbuild src/index.ts --bundle --platform=node --target=node20 --outfile=dist/index.cjs",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint .",
     "clean": "git clean -xdf node_modules .turbo dist"
   },
   "dependencies": {
     "@actions/core": "catalog:prod"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "catalog:dev",
     "@types/node": "catalog:dev",
     "esbuild": "catalog:esbuild-bundler",
-    "eslint": "catalog:dev",
-    "eslint-plugin-format": "catalog:dev",
     "typescript": "catalog:dev"
-  }
+  },
+  "packageManager": "pnpm@12.17.0"
 }

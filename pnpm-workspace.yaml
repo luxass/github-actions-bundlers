@@ -1,3 +1,10 @@
+ignoreScripts: true
+minimumReleaseAge: 7200
+trustPolicy: no-downgrade
+catalogMode: prefer
+strictDepBuilds: true
+blockExoticSubdeps: true
+
 packages:
   - actions/**
 
@@ -8,10 +15,10 @@ catalogs:
 
   # general dev dependencies
   dev:
-    "@luxass/eslint-config": 7.3.0
     "@types/node": 22.18.6
-    eslint: 10.0.3
-    eslint-plugin-format: 2.0.1
+    oxfmt: 0.75.0
+    oxlint: 1.90.0
+    oxlint-tsgolint: 7.0.2005
     turbo: 2.8.17
     typescript: 5.9.3
 
@@ -59,9 +66,11 @@ catalogs:
     webpack: 5.105.4
     webpack-cli: 7.0.0
 
-onlyBuiltDependencies:
-  - "@swc/core"
-  - esbuild
+allowBuilds:
+  "@swc/core": true
+  esbuild: true
 
 overrides:
   rolldown: catalog:rolldown-bundler
+  chokidar: 5.0.0
+  undici-types: 6.29.1

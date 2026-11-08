@@ -1,40 +1,44 @@
 {
   "name": "github-actions-bundlers",
-  "description": "A collection of GitHub Actions built using different Bundlers.",
-  "type": "module",
   "private": true,
+  "description": "A collection of GitHub Actions built using different Bundlers.",
+  "homepage": "https://github.com/luxass/github-actions-bundlers",
+  "bugs": {
+    "url": "https://github.com/luxass/lesetid/issues"
+  },
+  "license": "MIT",
   "author": {
     "name": "Lucas Nørgård",
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@10.34.5",
-  "license": "MIT",
-  "homepage": "https://github.com/luxass/github-actions-bundlers",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/luxass/github-actions-bundlers.git"
   },
-  "bugs": {
-    "url": "https://github.com/luxass/lesetid/issues"
+  "type": "module",
+  "scripts": {
+    "build": "turbo run build --filter \"./actions/*\" --concurrency=15",
+    "clean": "turbo run clean && git clean -xdf node_modules",
+    "dev": "turbo watch dev --filter \"./actions/*\"",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "typecheck": "turbo run typecheck",
+    "update:actions": "tsx ./scripts/update-hello-world-workflow.ts"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:dev",
+    "oxfmt": "catalog:dev",
+    "oxlint": "catalog:dev",
+    "oxlint-tsgolint": "catalog:dev",
+    "turbo": "catalog:dev",
+    "typescript": "catalog:dev"
   },
   "engines": {
     "node": ">=18",
     "pnpm": ">=9.2.0"
   },
-  "scripts": {
-    "build": "turbo run build --filter \"./actions/*\" --concurrency=15",
-    "clean": "turbo run clean && git clean -xdf node_modules",
-    "dev": "turbo watch dev --filter \"./actions/*\"",
-    "lint": "turbo run lint",
-    "typecheck": "turbo run typecheck",
-    "update:actions": "tsx ./scripts/update-hello-world-workflow.ts"
-  },
-  "devDependencies": {
-    "@luxass/eslint-config": "catalog:dev",
-    "@types/node": "catalog:dev",
-    "eslint": "catalog:dev",
-    "turbo": "catalog:dev",
-    "typescript": "catalog:dev"
-  }
+  "packageManager": "pnpm@12.17.0"
 }

@@ -2,35 +2,31 @@
   "name": "@github-actions-bundlers/hello-world-action-tsup",
   "version": "0.0.0",
   "description": "A hello world github action using tsup",
-  "type": "module",
+  "license": "MIT",
   "author": {
     "name": "Lucas Nørgård",
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@10.34.5",
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/luxass/github-actions-bundlers.git",
     "directory": "actions/tsup"
   },
+  "type": "module",
   "main": "dist/index.cjs",
   "scripts": {
     "build": "tsup",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint .",
     "clean": "git clean -xdf node_modules .turbo dist"
   },
   "dependencies": {
     "@actions/core": "catalog:prod"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "catalog:dev",
     "@types/node": "catalog:dev",
-    "eslint": "catalog:dev",
-    "eslint-plugin-format": "catalog:dev",
     "tsup": "catalog:tsup-bundler",
     "typescript": "catalog:dev"
-  }
+  },
+  "packageManager": "pnpm@12.17.0"
 }

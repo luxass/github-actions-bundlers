@@ -150,6 +150,7 @@ If you want to create your own action, using one of these bundlers, there is a g
 
 - Primarily designed for web applications, less suitable for libraries
 - May require additional configuration for complex projects
+
 </details>
 
 <details>
@@ -165,6 +166,7 @@ If you want to create your own action, using one of these bundlers, there is a g
 ### Cons
 
 - Newer project, may lack some features
+
 </details>
 
 ## 📄 License
