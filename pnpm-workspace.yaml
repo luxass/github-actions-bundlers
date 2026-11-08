@@ -32,7 +32,7 @@ catalogs:
 
   # prod dependencies
   prod:
-    "@actions/core": 3.0.0
+    "@actions/core": 3.0.1
 
   # rolldown specific dependencies
   rolldown-bundler:
