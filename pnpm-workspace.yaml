@@ -24,7 +24,7 @@ catalogs:
 
   # esbuild specific dependencies
   esbuild-bundler:
-    esbuild: 0.27.4
+    esbuild: 0.28.2
 
   # ncc specific dependencies
   ncc-bundler:
