@@ -20,7 +20,7 @@ catalogs:
     oxlint: 1.90.0
     oxlint-tsgolint: 7.0.2005
     turbo: 2.11.10
-    typescript: 5.9.3
+    typescript: 6.0.3
 
   # esbuild specific dependencies
   esbuild-bundler:
