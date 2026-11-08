@@ -1,3 +1,10 @@
+ignoreScripts: true
+minimumReleaseAge: 7200
+trustPolicy: no-downgrade
+catalogMode: prefer
+strictDepBuilds: true
+blockExoticSubdeps: true
+
 packages:
   - actions/**
 
@@ -59,9 +66,11 @@ catalogs:
     webpack: 5.105.4
     webpack-cli: 7.0.0
 
-onlyBuiltDependencies:
-  - "@swc/core"
-  - esbuild
+allowBuilds:
+  "@swc/core": true
+  esbuild: true
 
 overrides:
   rolldown: catalog:rolldown-bundler
+  chokidar: 5.0.0
+  undici-types: 6.29.1
