@@ -19,7 +19,7 @@ catalogs:
     oxfmt: 0.75.0
     oxlint: 1.90.0
     oxlint-tsgolint: 7.0.2005
-    turbo: 2.8.17
+    turbo: 2.11.10
     typescript: 5.9.3
 
   # esbuild specific dependencies
