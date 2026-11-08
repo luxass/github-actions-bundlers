@@ -192,8 +192,8 @@ catalogs:
       version: 0.28.2
   ncc-bundler:
     '@vercel/ncc':
-      specifier: 0.38.4
-      version: 0.38.4
+      specifier: 0.45.0
+      version: 0.45.0
   prod:
     '@actions/core':
       specifier: 3.0.1
@@ -314,7 +314,7 @@ importers:
         version: 22.18.6
       '@vercel/ncc':
         specifier: catalog:ncc-bundler
-        version: 0.38.4
+        version: 0.45.0
       typescript:
         specifier: catalog:dev
         version: 5.9.3
@@ -1946,8 +1946,8 @@ packages:
   '@types/ws@8.18.2':
     resolution: {integrity: sha512-67MQl+fpWKVTT1NYdnmo3U4sc/xPo/zQBncVnI74qmQa0z/b+1g6iYqNmGCPbxO+zz2aklb08a0oHfegiVd0/w==}
 
-  '@vercel/ncc@0.38.4':
-    resolution: {integrity: sha512-8LwjnlP39s08C08J5NstzriPvW1SP8Zfpp1BvC2sI35kPeZnHfxVkCwu4/+Wodgnd60UtT1n8K8zw+Mp7J9JmQ==}
+  '@vercel/ncc@0.45.0':
+    resolution: {integrity: sha512-8zPi1yO2mHpoKTD+e+Bf0ZT3e+sWHSOyGapm9s7b5R0gxJi3CiFTqmeQiMEyu6ejrz2s09M8JkEoUaTWjBJPQQ==}
     hasBin: true
 
   '@webassemblyjs/ast@1.14.1':
@@ -4568,7 +4568,7 @@ snapshots:
     dependencies:
       '@types/node': 22.18.6
 
-  '@vercel/ncc@0.38.4': {}
+  '@vercel/ncc@0.45.0': {}
 
   '@webassemblyjs/ast@1.14.1':
     dependencies:
