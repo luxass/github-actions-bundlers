@@ -10,7 +10,6 @@ on:
       - synchronize
 
 jobs:
-
   bunchee:
     runs-on: ubuntu-latest
     steps:

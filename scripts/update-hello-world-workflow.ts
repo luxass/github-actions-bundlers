@@ -38,7 +38,7 @@ async function run() {
   }
 
   await writeFile("./.github/workflows/hello-world.yaml", baseWorkflowFile);
-  exec("npx eslint . --fix", (err, stdout, _stderr) => {
+  exec("pnpm oxfmt .github/workflows/hello-world.yaml", (err, stdout, _stderr) => {
     if (err) {
       console.error(err);
       return;
@@ -49,6 +49,5 @@ async function run() {
 
 run().catch((err) => {
   console.error(err);
-  // eslint-disable-next-line node/prefer-global/process
   process.exit(1);
 });

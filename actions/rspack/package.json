@@ -2,36 +2,32 @@
   "name": "@github-actions-bundlers/hello-world-action-rspack",
   "version": "0.0.0",
   "description": "A hello world github action using rspack",
-  "type": "module",
+  "license": "MIT",
   "author": {
     "name": "Lucas Nørgård",
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@12.17.0",
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/luxass/github-actions-bundlers.git",
     "directory": "actions/rspack"
   },
+  "type": "module",
   "main": "dist/index.cjs",
   "scripts": {
     "build": "rspack build",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint .",
     "clean": "git clean -xdf node_modules .turbo dist"
   },
   "dependencies": {
     "@actions/core": "catalog:prod"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "catalog:dev",
     "@rspack/cli": "catalog:rspack-bundler",
     "@rspack/core": "catalog:rspack-bundler",
     "@types/node": "catalog:dev",
-    "eslint": "catalog:dev",
-    "eslint-plugin-format": "catalog:dev",
     "typescript": "catalog:dev"
-  }
+  },
+  "packageManager": "pnpm@12.17.0"
 }

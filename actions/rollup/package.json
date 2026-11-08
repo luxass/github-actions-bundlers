@@ -2,40 +2,36 @@
   "name": "@github-actions-bundlers/hello-world-action-rollup",
   "version": "0.0.0",
   "description": "A hello world github action using rollup",
-  "type": "module",
+  "license": "MIT",
   "author": {
     "name": "Lucas Nørgård",
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@12.17.0",
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/luxass/github-actions-bundlers.git",
     "directory": "actions/rollup"
   },
+  "type": "module",
   "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c rollup.config.mjs",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint .",
     "clean": "git clean -xdf node_modules .turbo dist"
   },
   "dependencies": {
     "@actions/core": "catalog:prod"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "catalog:dev",
     "@rollup/plugin-commonjs": "catalog:rollup-bundler",
     "@rollup/plugin-json": "catalog:rollup-bundler",
     "@rollup/plugin-node-resolve": "catalog:rollup-bundler",
     "@rollup/plugin-typescript": "catalog:rollup-bundler",
     "@types/node": "catalog:dev",
-    "eslint": "catalog:dev",
-    "eslint-plugin-format": "catalog:dev",
     "rollup": "catalog:rollup-bundler",
     "tslib": "catalog:rollup-bundler",
     "typescript": "catalog:dev"
-  }
+  },
+  "packageManager": "pnpm@12.17.0"
 }

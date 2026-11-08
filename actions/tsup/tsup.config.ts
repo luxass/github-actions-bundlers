@@ -7,10 +7,7 @@ export default defineConfig({
   dts: false,
   treeshake: true,
   bundle: true,
-  noExternal: [
-    "@actions/core",
-    "@actions/github",
-  ],
+  noExternal: ["@actions/core", "@actions/github"],
   skipNodeModulesBundle: false,
   outExtension() {
     return {
