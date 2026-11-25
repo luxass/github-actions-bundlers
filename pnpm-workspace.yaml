@@ -4,7 +4,7 @@ packages:
 catalogs:
   # bunchee specific dependencies
   bunchee-bundler:
-    bunchee: 6.9.4
+    bunchee: 7.1.0
 
   # general dev dependencies
   dev:
